@@ -61,7 +61,7 @@ export default function Admin() {
                 <AdminTeams />
             </TabsContent>
             <TabsContent value="setting">
-                <p className='py-6 opacity-60 font-light italic'>Underdevelopment</p>
+                <p className='py-6 opacity-60 font-light italic'>Underdevelopment - bisa ditambahi fitur lainnya kedepannya</p>
             </TabsContent>
         </Tabs>
       </div>

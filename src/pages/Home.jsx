@@ -15,6 +15,8 @@ export default function Home() {
   useEffect(() => {
     AOS.init();
     }, []);
+
+  console.log('dibuat karena sudah capek dengan error wordpress, -- Una 4 Mar 2025')
   return (
     <div>
       <Header />
