@@ -22,7 +22,8 @@ export default function Services() {
               <CardTitle className='text-3xl border-b border-black dark:border-white dark:hover:border-black pb-8'>Web Apps</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className='opacity-70 text-md'>Perusahaan kami yang bergerak dibidang website dan aplikasi, banyak mengembangkan aplikasi berbasis website, dimana aplikasi tersebut dapat dengan mudah diakses oleh pelanggan kami tanpa menguras isi hard disk, karena kami memiliki penyimpanan bersistem cloud.</p>
+              <p className='opacity-70 text-md mb-8'>Perusahaan kami yang bergerak dibidang website dan aplikasi, banyak mengembangkan aplikasi berbasis website, dimana aplikasi tersebut dapat dengan mudah diakses oleh pelanggan kami tanpa menguras isi hard disk, karena kami memiliki penyimpanan bersistem cloud.</p>
+              <img src='/media/webapp.svg' />
             </CardContent>
           </Card>
           <Card className="w-full hover:bg-[#D3E671]">
@@ -30,7 +31,8 @@ export default function Services() {
               <CardTitle className='text-3xl border-b border-black dark:border-white dark:hover:border-black pb-8'>Mobile Apps</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className='opacity-70 text-md'>Dengan tenaga yang handal dan profesional, sampai saat ini perusahaan kami juga ikut serta dalam mempublish dan mengembangkan beberapa aplikasi dalam sistem smartphone (mobile) dengan berbagai macam tipe aplikasi.</p>
+              <p className='opacity-70 text-md mb-8'>Dengan tenaga yang handal dan profesional, sampai saat ini perusahaan kami juga ikut serta dalam mempublish dan mengembangkan beberapa aplikasi dalam sistem smartphone (mobile) dengan berbagai macam tipe aplikasi.</p>
+              <img src='/media/mobileapp.svg' />
             </CardContent>
           </Card>
           <Card className="w-full hover:bg-[#D3E671]">
@@ -38,7 +40,8 @@ export default function Services() {
               <CardTitle className='text-3xl border-b border-black dark:border-white dark:hover:border-black pb-8'>Infrastructure</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className='opacity-70 text-md'>Infrastructure merupakan backbone utama dalam sebuah solusi yg diberikan. Solusi Infrastructure kami disini meliputi pengadaan server, firewall, maintenance nya sampai pengadaan Komputer Client.</p>
+              <p className='opacity-70 text-md mb-8'>Infrastructure merupakan backbone utama dalam sebuah solusi yg diberikan. Solusi Infrastructure kami disini meliputi pengadaan server, firewall, maintenance nya sampai pengadaan Komputer Client.</p>
+              <img src='/media/infrastructure.svg' />
             </CardContent>
           </Card>
         </div>

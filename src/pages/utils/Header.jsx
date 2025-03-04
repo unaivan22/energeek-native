@@ -16,16 +16,18 @@ export default function Header() {
                 <svg className="hs-collapse-open:block hidden shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
                 <span className="sr-only">Toggle</span>
               </button>
-              <Button className='rounded-2xl'>
-                Contact
-              </Button>
+              <div className='lg:w-[126px] w-fit'>
+                <Button className='rounded-2xl'>
+                  Contact
+                </Button>
+              </div>
             </div>
             <div id="hs-navbar-alignment" className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:grow-0 sm:basis-auto sm:block sm:order-2" aria-labelledby="hs-navbar-alignment-collapse">
               <div className="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:mt-0 sm:ps-5">
-                <a className="font-medium text-blue-500 focus:outline-hidden" href="#" aria-current="page">Landing</a>
-                <a className="font-medium text-gray-600 hover:text-gray-400 focus:outline-hidden focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500" href="#">Account</a>
-                <a className="font-medium text-gray-600 hover:text-gray-400 focus:outline-hidden focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500" href="#">Work</a>
-                <a className="font-medium text-gray-600 hover:text-gray-400 focus:outline-hidden focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500" href="#">Blog</a>
+                <a className="font-medium text-gray-600 hover:text-rose-400 focus:outline-hidden focus:text-gray-400 dark:text-neutral-400 dark:hover:text-rose-500 dark:focus:text-rose-500" href="/works">Work</a>
+                <a className="font-medium text-gray-600 hover:text-rose-400 focus:outline-hidden focus:text-gray-400 dark:text-neutral-400 dark:hover:text-rose-500 dark:focus:text-rose-500" href="/teams">Team</a>
+                <a className="font-medium text-gray-600 hover:text-rose-400 focus:outline-hidden focus:text-gray-400 dark:text-neutral-400 dark:hover:text-rose-500 dark:focus:text-rose-500" href="/blogs">Blog</a>
+                <a className="font-medium text-gray-600 hover:text-rose-400 focus:outline-hidden focus:text-gray-400 dark:text-neutral-400 dark:hover:text-rose-500 dark:focus:text-rose-500" href="https://careers.energeek.id" target='_blank'>Career</a>
               </div>
             </div>
           </nav>

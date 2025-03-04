@@ -5,7 +5,7 @@ const images = import.meta.glob('/public/clients/*.webp', { eager: true });
 export default function Clients() {
   return (
     <div className='py-6 bg-white border border-black flex flex-col items-center justify-center'>
-      <InfiniteSlider gap={56}>
+      <InfiniteSlider gap={56} speedOnHover={1}>
         {Object.keys(images).map((key, index) => {
             const fileName = key.split('/').pop().replace('.webp', '');
             return (
