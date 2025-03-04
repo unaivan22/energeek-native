@@ -1,8 +1,26 @@
 import { Button } from '@/components/ui/button'
 import { ArrowUpRight } from 'lucide-react'
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 export default function Portfolios() {
+  const [projects, setProjects] = useState([]);
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        const res = await axios.get("http://localhost/api/projects.php");
+        setProjects(res.data);
+      } catch (err) {
+        console.error("Error fetching projects:", err);
+        setError("Gagal memuat data.");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProjects();
+  }, []);
   return (
     <div className='bg-stone-100 dark:bg-stone-800'>
       <div className='container py-32'>
@@ -14,11 +32,21 @@ export default function Portfolios() {
           <Button className='rounded-full text-xl border-2 border-black px-6 py-10' size='lg' variant='outline'>Semua Project <ArrowUpRight className='w-4 h-4 ml-2' /> </Button>
         </div>
         <div className='grid lg:grid-cols-3 grid-cols-1 py-12 gap-6'>
-          <div className='border border-black bg-stone-100 dark:bg-black flex flex-col rounded-xl p-6 gap-4 shadow-[6px_6px_0px_rgba(0,0,0,1)] hover:shadow-[10px_10px_0px_rgba(0,0,0,1)] cursor-pointer'>
-            <h1 className='text-3xl font-semibold line-clamp-2'>KSI - SSO</h1>
-            <img className='rounded-xl object-cover' src='https://energeek.co.id/wp-content/uploads/2024/07/0-1-scaled.jpg' />
-            <p className='italic text-sm opacity-70 font-light'>Web application</p>
-          </div>
+          {projects.length > 0 ? (
+            projects.slice(0,2).map((project) => (
+              <Link to={`/project/${project.id}`} >
+              <div key={project.id} className='border border-black bg-stone-100 dark:bg-black flex flex-col rounded-xl p-6 gap-4 shadow-[6px_6px_0px_rgba(0,0,0,1)] hover:shadow-[10px_10px_0px_rgba(0,0,0,1)] cursor-pointer'>
+                <h1 className='text-3xl font-semibold line-clamp-2'>{project.name}</h1>
+                <img className='rounded-xl object-cover h-[300px]' src={project.thumbnail} alt={project.nama} />
+                <p className='italic text-sm opacity-70 font-light'>Web application</p>
+              </div>
+              </Link>
+            ))
+          ) : (
+            <div>
+              <p className="text-center">Belum ada project.</p>
+            </div>
+          )}
         </div>
       </div>
     </div>
