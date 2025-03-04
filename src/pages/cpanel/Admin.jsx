@@ -12,6 +12,7 @@ import AdminBlogs from './AdminBlogs'
 import { ArrowUpRight } from 'lucide-react'
 import Forbidden from '../misc/Forbidden'
 import { ModeToggle } from '@/components/mode-toggle';
+import ClearCookies from '../misc/ClearCookies';
 
 export default function Admin() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -41,7 +42,7 @@ export default function Admin() {
               <a href='/' target='_blank'>
                 <Button className='rounded-xl' >Go to Home <ArrowUpRight className='w-4 ml-2' /></Button>
               </a>
-              <Button className='rounded-xl' variant='outline'>Sign Out</Button>
+              <ClearCookies />
             </div>
         </div>
         <Tabs defaultValue="project" className="w-full">

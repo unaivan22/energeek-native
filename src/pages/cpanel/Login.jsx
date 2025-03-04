@@ -74,18 +74,16 @@ const Login = () => {
     const adminAuth = sessionStorage.getItem('adminAuth');
     if (adminAuth === 'true') {
       // If session is active, redirect to /admin
-      navigate('/loker-rJWbRV');
-      // navigate('/loker-rJWbRV');
-      // navigate('/loker-rJWbRV');
+      navigate('/admin');
       handleRefresh();
     }
   }, [navigate]);
 
   return (
-    <div className='bg-yellow-500'>
+    <div className='bg-stone-100 dark:bg-black'>
       <div className="flex items-center justify-center h-screen ">
-        <div className="bg-white dark:bg-stone-900 pt-12 px-8 pb-12 border-2 border-black shadow-lg w-80">
-          <img src='/energeek-full.svg' className='h-6 mb-2' />
+        <div className="bg-white dark:bg-stone-800 pt-12 px-8 pb-12 border-2 border-black shadow-lg w-80">
+          <img src='/elogo.svg' className='h-6 mb-2' />
           <h1 className="text-2xl font-bold mb-4">
             {isSignUp ? 'Admin Sign Up' : 'Admin Login'}
           </h1>

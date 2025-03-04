@@ -45,8 +45,8 @@ export default function AdminProjects() {
         <Table>
           <TableHeader>
             <TableRow>
+              <TableHead className='w-[120px]'>Thumbnail</TableHead>
               <TableHead>Nama</TableHead>
-              <TableHead>Thumbnail</TableHead>
               <TableHead>Year - Client</TableHead>
               <TableHead>Deskripsi</TableHead>
             </TableRow>
@@ -55,10 +55,10 @@ export default function AdminProjects() {
             {projects.length > 0 ? (
               projects.map((project) => (
                 <TableRow key={project.id}>
-                  <TableCell className="font-medium">{project.name}</TableCell>
                   <TableCell>
                     <img src={project.thumbnail} alt={project.nama} className="w-20 h-12 object-cover rounded" />
                   </TableCell>
+                  <TableCell className="font-medium">{project.name}</TableCell>
                   <TableCell>{project.year} - {project.client}</TableCell>
                   <TableCell dangerouslySetInnerHTML={{ __html: project.description }}></TableCell>
                 </TableRow>

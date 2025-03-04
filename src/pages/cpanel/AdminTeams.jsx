@@ -75,22 +75,22 @@ export default function AdminTeams() {
         <TableCaption>A list of your recent teams.</TableCaption>
         <TableHeader>
           <TableRow>
+            <TableHead>Photo</TableHead>
             <TableHead>Name</TableHead>
             <TableHead>Email</TableHead>
             <TableHead>Role</TableHead>
-            <TableHead>Photo</TableHead>
             <TableHead>Actions</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
           {teams.map((team) => (
             <TableRow key={team.id}>
+              <TableCell>
+                {team.photo && <img src={team.photo} alt="Team" className="w-20 h-20 rounded-lg object-cover" />}
+              </TableCell>
               <TableCell>{team.name}</TableCell>
               <TableCell>{team.email}</TableCell>
               <TableCell>{team.role}</TableCell>
-              <TableCell>
-                {team.photo && <img src={team.photo} alt="Team" className="w-16 h-16 rounded-lg" />}
-              </TableCell>
               <TableCell>
                 <Button className="bg-yellow-500 mr-2" onClick={() => handleEdit(team)}>
                   Edit
