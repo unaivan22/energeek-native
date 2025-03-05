@@ -35,8 +35,12 @@ export default function AdminProjects() {
 
   return (
     <div className='py-6'>
-      <h1 className='text-xl font-semibold mb-4'>Daftar Project</h1>
-      <a href='/project/add'><Button>Add New</Button></a>
+      <div className="flex flex-row items-center pb-6 gap-4">
+        <h1 className="text-xl font-semibold">Daftar Project</h1>
+        <a href="/project/add">
+          <Button className='rounded-xl'>Add New</Button>
+        </a>
+      </div>
 
       {loading && <p>Loading...</p>}
       {error && <p className="text-red-500">{error}</p>}
@@ -47,8 +51,10 @@ export default function AdminProjects() {
             <TableRow>
               <TableHead className='w-[120px]'>Thumbnail</TableHead>
               <TableHead>Nama</TableHead>
-              <TableHead>Year - Client</TableHead>
+              <TableHead className='w-[120px]'>Year</TableHead>
+              <TableHead className='w-[200px]'>Client</TableHead>
               <TableHead>Deskripsi</TableHead>
+              <TableHead className='w-[120px] text-center'>*</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -59,8 +65,14 @@ export default function AdminProjects() {
                     <img src={project.thumbnail} alt={project.nama} className="w-20 h-12 object-cover rounded" />
                   </TableCell>
                   <TableCell className="font-medium">{project.name}</TableCell>
-                  <TableCell>{project.year} - {project.client}</TableCell>
+                  <TableCell>{project.year}</TableCell>
+                  <TableCell>{project.client}</TableCell>
                   <TableCell dangerouslySetInnerHTML={{ __html: project.description }}></TableCell>
+                  <TableCell className='text-center'>
+                    <a href={`/admin/project/edit/${project.id}`}>
+                      <Button variant='outline' className='rounded-2xl'>Edit</Button>
+                    </a>
+                  </TableCell>
                 </TableRow>
               ))
             ) : (

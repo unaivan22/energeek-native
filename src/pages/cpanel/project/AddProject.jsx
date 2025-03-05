@@ -1,10 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import "quill/dist/quill.core.css";
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from 'react-router-dom';
+import {
+    Breadcrumb,
+    BreadcrumbEllipsis,
+    BreadcrumbItem,
+    BreadcrumbLink,
+    BreadcrumbList,
+    BreadcrumbPage,
+    BreadcrumbSeparator,
+  } from "@/components/ui/breadcrumb"
+import Forbidden from '@/pages/misc/Forbidden';
+import {
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+  } from "@/components/ui/card"
 
 export default function AddProject() {
     const [form, setForm] = useState({
@@ -18,6 +37,21 @@ export default function AddProject() {
 
     const [thumbnailFile, setThumbnailFile] = useState(null);
     const [screenshotFiles, setScreenshotFiles] = useState([]); // State untuk multiple images
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+    const navigate = useNavigate();
+
+    useEffect(() => {
+    const handleResize = () => {
+        setIsMobile(window.innerWidth < 768); // Change the breakpoint as per your needs
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup function to remove the event listener
+    return () => {
+        window.removeEventListener('resize', handleResize);
+    };
+    }, [])
 
     const handleInputChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value });
@@ -73,6 +107,7 @@ export default function AddProject() {
 
             if (res.data.success) {
                 alert("Project berhasil ditambahkan!");
+                navigate('/admin');
             } else {
                 alert("Gagal menambahkan project: " + res.data.error);
             }
@@ -93,39 +128,77 @@ export default function AddProject() {
     ];
 
     return (
-        <div className='container max-w-3xl mx-auto py-12'>
-            <h1 className='text-2xl font-bold mb-6'>Tambah Project</h1>
-            <form onSubmit={handleSubmit} className='flex flex-col gap-4 bg-white p-6 rounded-lg shadow-lg'>
-                <Input type="text" name="name" placeholder="Judul" value={form.name} onChange={handleInputChange} required />
-                <Input type="text" name="client" placeholder="Client" value={form.client} onChange={handleInputChange} required />
-                <Input type="text" name="year" placeholder="Tahun" value={form.year} onChange={handleInputChange} required />
-
-                <label className="text-gray-600">Thumbnail</label>
-                <input type="file" accept=".webp" onChange={handleThumbnailChange} className="border rounded p-2" />
-                {thumbnailFile && <img src={URL.createObjectURL(thumbnailFile)} alt="Preview" className="w-32 mt-2" />}
-
-                <label className="text-gray-600">Deskripsi</label>
-                <ReactQuill
-                    theme="snow"
-                    bounds=".quill-editor"
-                    modules={{ toolbar: fullToolbarOptions }}
-                    value={form.description}
-                    onChange={handleQuillChange}
-                    className="w-full h-[200px] rounded"
-                />
-
-                <label className="text-gray-600">Screenshot Project</label>
-                <input type="file" multiple accept=".webp" onChange={handleScreenshotChange} className="border rounded p-2" />
-                {screenshotFiles.length > 0 && (
-                    <div className="mt-2 flex gap-2">
-                        {screenshotFiles.map((file, index) => (
-                            <img key={index} src={URL.createObjectURL(file)} alt="Screenshot" className="w-24" />
-                        ))}
-                    </div>
-                )}
-
-                <Button type="submit" className="mt-4 bg-blue-500 hover:bg-blue-600 text-white">Simpan</Button>
-            </form>
+        <div>
+            {isMobile ? <Forbidden /> : 
+            <div className='container mx-auto py-12'>
+                <div className='flex flex-col gap-2 mb-8'>
+                    <h1 className='text-2xl font-bold'>New Project</h1>
+                    <Breadcrumb>
+                        <BreadcrumbList>
+                            <BreadcrumbItem>
+                            <BreadcrumbLink href="/admin">Admin</BreadcrumbLink>
+                            </BreadcrumbItem>
+                            <BreadcrumbSeparator />
+                            <BreadcrumbItem>
+                            <BreadcrumbPage>Add New Project</BreadcrumbPage>
+                            </BreadcrumbItem>
+                        </BreadcrumbList>
+                    </Breadcrumb>
+                </div>
+                <Card className="w-full">
+                    <CardHeader>
+                        <CardTitle>Create new project</CardTitle>
+                        <CardDescription>Write in the forms below.</CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                        <form onSubmit={handleSubmit}>
+                            <div className='flex gap-12 items-start'>
+                                <div className='flex flex-col gap-4 w-full'>
+                                    <Input type="text" name="name" placeholder="Judul" value={form.name} onChange={handleInputChange} required />
+                                    <div className='flex gap-4'>
+                                        <Input type="text" name="client" placeholder="Client" value={form.client} onChange={handleInputChange} required />
+                                        <Input type="text" name="year" placeholder="Tahun" value={form.year} onChange={handleInputChange} required />
+                                    </div>
+                                    <div className='flex flex-col gap-2 min-h-[280px]'>
+                                        <label className="text-gray-600">Deskripsi</label>
+                                        <ReactQuill
+                                            theme="snow"
+                                            bounds=".quill-editor"
+                                            modules={{ toolbar: fullToolbarOptions }}
+                                            value={form.description}
+                                            onChange={handleQuillChange}
+                                            className="w-full h-[200px] rounded"
+                                        />
+                                    </div>
+                                    <div className='flex flex-col gap-2'>
+                                        <label className="text-gray-600">Screenshot Project <span className='text-xs text-rose-500'>*Must .webp format for size optimize</span></label>
+                                        <Input type="file" multiple accept=".webp" onChange={handleScreenshotChange} className="border rounded p-2" />
+                                        {screenshotFiles.length > 0 && (
+                                            <div className="mt-2 flex flex-wrap gap-2">
+                                                {screenshotFiles.map((file, index) => (
+                                                    <img key={index} src={URL.createObjectURL(file)} alt="Screenshot" className="w-24 aspect-square object-cover border-2 border-black" />
+                                                ))}
+                                            </div>
+                                        )}
+                                    </div>
+                                </div>
+                                <div className='flex flex-col gap-2 w-[350px]'>
+                                    <div className='flex flex-col gap-1 items-start'>
+                                        <label className="text-gray-600">Thumbnail <br /> <span className='text-xs text-rose-500'>*Must .webp format for size optimize</span></label>
+                                        <Input type="file" accept=".webp" onChange={handleThumbnailChange} className="border rounded p-2 w-full" />
+                                    </div>
+                                    {thumbnailFile && <img src={URL.createObjectURL(thumbnailFile)} alt="Preview" className="h-[250px] object-cover w-full mt-2 border-2 border-black" />}
+                                </div>
+                            </div>
+                            <div className="flex justify-end pt-12">
+                                {/* <a href='/admin'><Button variant="outline">Cancel</Button></a> */}
+                                <Button type="submit">Save</Button>
+                            </div>
+                        </form>
+                    </CardContent>
+                    </Card>
+            </div>
+            }
         </div>
     );
 }

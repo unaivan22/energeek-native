@@ -70,7 +70,12 @@ export default function AdminTeams() {
 
   return (
     <div className="py-6">
-      <h1 className="text-xl font-semibold mb-4">Daftar Teams</h1>
+      <div className="flex flex-row items-center pb-6 gap-4">
+        <h1 className="text-xl font-semibold">Daftar Teams</h1>
+        <a href="/team/add">
+          <Button className='rounded-xl'>Add New</Button>
+        </a>
+      </div>
       <Table>
         <TableCaption>A list of your recent teams.</TableCaption>
         <TableHeader>
@@ -128,7 +133,7 @@ export default function AdminTeams() {
           />
           <label className="text-gray-600">Update Photo</label>
           {editData.photo && <img src={editData.photo} alt="Team" className="w-16 h-16 rounded-lg" />}
-          <input type="file" accept="image/*" onChange={handleFileChange} className="border rounded p-2" />
+          <input type="file" accept=".webp" onChange={handleFileChange} className="border rounded p-2" />
           {file && <img src={URL.createObjectURL(file)} alt="Preview" className="w-32 mt-2" />}
           <Button onClick={handleUpdate} className="mt-4 bg-blue-500 hover:bg-blue-600">
             Simpan Perubahan

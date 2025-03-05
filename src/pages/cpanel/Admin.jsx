@@ -9,10 +9,24 @@ import AdminProjects from './AdminProjects'
 import { Button } from '@/components/ui/button'
 import AdminTeams from './AdminTeams'
 import AdminBlogs from './AdminBlogs'
-import { ArrowUpRight } from 'lucide-react'
+import { ArrowUpRight, MoreHorizontal } from 'lucide-react'
 import Forbidden from '../misc/Forbidden'
 import { ModeToggle } from '@/components/mode-toggle';
 import ClearCookies from '../misc/ClearCookies';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuPortal,
+  DropdownMenuSeparator,
+  DropdownMenuShortcut,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 
 export default function Admin() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -37,12 +51,30 @@ export default function Admin() {
       <div className='container'>
         <div className='flex items-center justify-between items-center'>
             <h1 className='font-semibold text-4xl py-6'>Admin Panel</h1>
-            <div className='flex  gap-3'>
+            <div className='flex gap-3'>
               <ModeToggle />
-              <a href='/' target='_blank'>
-                <Button className='rounded-xl' >Go to Home <ArrowUpRight className='w-4 ml-2' /></Button>
-              </a>
-              <ClearCookies />
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="outline" size="icon" className='w-full aspect-square rounded-2xl'>
+                    <MoreHorizontal />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="w-56">
+                  <DropdownMenuLabel>Option</DropdownMenuLabel>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuGroup>
+                    <DropdownMenuItem>
+                    <a href='/' target='_blank' className='w-full'>
+                      <div className='flex items-center justify-between w-full' >Go to Home <ArrowUpRight className='w-4 ml-2' /></div>
+                    </a>
+                    </DropdownMenuItem>
+                  </DropdownMenuGroup>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem>
+                    <ClearCookies />
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
             </div>
         </div>
         <Tabs defaultValue="project" className="w-full">

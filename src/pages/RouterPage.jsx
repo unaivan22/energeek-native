@@ -8,6 +8,7 @@ import AddTeam from './cpanel/team/AddTeam';
 import Login from './cpanel/Login';
 import Daftar from './cpanel/Signup';
 import ProjectDetail from './cpanel/project/ProjectDetail';
+import EditProject from './cpanel/project/EditProject';
 
 export default function RouterPage() {
   const isAuthenticated = sessionStorage.getItem('adminAuth');
@@ -19,10 +20,18 @@ export default function RouterPage() {
               path="/admin" 
               element={isAuthenticated ? <Admin /> : <Navigate to="/login" />} 
             />
+            
             <Route path="/Login" element={<Login />} />
             {/* <Route path='/admin' element={<Admin/>} /> */}
 
-            <Route path='/project/add' element={<AddProject/>} />
+            <Route 
+              path="/project/add" 
+              element={isAuthenticated ? <AddProject /> : <Navigate to="/login" />} 
+            />
+            <Route 
+              path="/admin/project/edit/:id" 
+              element={isAuthenticated ? <EditProject /> : <Navigate to="/login" />} 
+            />
             <Route path="/project/:id" element={<ProjectDetail />} />
 
 

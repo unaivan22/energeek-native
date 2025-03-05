@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button';
+import { LogOut } from 'lucide-react';
 import React from 'react';
 
 const ClearCookies = () => {
@@ -28,9 +29,10 @@ const ClearCookies = () => {
   };
 
   return (
-    <div>
-      <Button variant='outline' onClick={clearAllStorage} className="rounded-xl">
+    <div className='w-full'>
+      <Button variant='outline' onClick={clearAllStorage} className="rounded-xl w-full">
         Keluar
+        <LogOut className='w-4 h-4 ml-2' />
       </Button>
     </div>
   );

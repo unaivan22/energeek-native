@@ -26,7 +26,7 @@ export default function Teams() {
           <p className='opacity-50 text-md lg:max-w-[500px]'>Meet Our Professional Staff</p>
         </div>
         <div className='grid lg:grid-cols-3 grid-cols-1 py-24 pb-12 gap-6'>
-        {teams.map((team) => (
+        {teams.slice(0,3).map((team) => (
           <div key={team.id} className='border border-black dark:border-white flex flex-col items-center rounded-xl p-6 gap-2 hover:shadow-[10px_10px_0px_rgba(0,0,0,1)] cursor-pointer'>
             {team.photo && <img src={team.photo} alt="Team" className='rounded-full object-cover h-[280px] w-auto' />}
             <h1 className='text-xl font-semibold line-clamp-2'>{team.name}</h1>
