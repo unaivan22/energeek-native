@@ -17,6 +17,13 @@ export default function WhyChooseUs() {
             <h3 className='text-2xl'>Expertise & Experience</h3>
             <p className='text-sm font-light opacity-90'>Energeek helps your company go digital. With cutting-edge technology services, we ensure your business stays competitive and innovative.</p>
           </div>
+          <div className='flex flex-col items-center text-center gap-4 border border-white rounded-xl p-12 hover:bg-[#89AC46] transition delay-50 duration-300 ease-in-out'>
+            <div className='bg-rose-500 w-fit p-6 rounded-full'>
+              <Atom className='w-12 h-12' />
+            </div>
+            <h3 className='text-2xl'>Expertise & Experience</h3>
+            <p className='text-sm font-light opacity-90'>Energeek helps your company go digital. With cutting-edge technology services, we ensure your business stays competitive and innovative.</p>
+          </div> 
         </div>
       </div>
     </div>
