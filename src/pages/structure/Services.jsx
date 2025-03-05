@@ -17,7 +17,7 @@ export default function Services() {
           <p className='opacity-50 text-md lg:max-w-[500px]'>Committed to excellence, our company delivers unparalleled Reliable Technology Services, ensuring each client benefits from superior, and consistent</p>
         </div>
         <div className='grid lg:grid-cols-3 grid-cols-1 py-12 gap-4'>
-          <Card className="w-full hover:bg-[#D3E671]">
+          <Card className="w-full hover:bg-[#D3E671] dark:hover:text-black">
             <CardHeader>
               <CardTitle className='text-3xl border-b border-black dark:border-white dark:hover:border-black pb-8'>Web Apps</CardTitle>
             </CardHeader>
@@ -26,7 +26,7 @@ export default function Services() {
               <img src='/media/webapp.svg' />
             </CardContent>
           </Card>
-          <Card className="w-full hover:bg-[#D3E671]">
+          <Card className="w-full hover:bg-[#D3E671] dark:hover:text-black">
             <CardHeader>
               <CardTitle className='text-3xl border-b border-black dark:border-white dark:hover:border-black pb-8'>Mobile Apps</CardTitle>
             </CardHeader>
@@ -35,7 +35,7 @@ export default function Services() {
               <img src='/media/mobileapp.svg' />
             </CardContent>
           </Card>
-          <Card className="w-full hover:bg-[#D3E671]">
+          <Card className="w-full hover:bg-[#D3E671] dark:hover:text-black">
             <CardHeader>
               <CardTitle className='text-3xl border-b border-black dark:border-white dark:hover:border-black pb-8'>Infrastructure</CardTitle>
             </CardHeader>

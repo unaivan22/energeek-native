@@ -1,6 +1,8 @@
 import { Button } from '@/components/ui/button'
 import { Drawer, DrawerContent, DrawerTrigger } from '@/components/ui/drawer'
+import { ArrowUpRight } from 'lucide-react';
 import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom'
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,17 +38,32 @@ export default function Header() {
                 </DrawerTrigger>
                 <DrawerContent>
                   <div className="flex flex-col gap-5 p-5">
-                    <a className="font-medium text-gray-600 hover:text-rose-400 dark:text-neutral-400 dark:hover:text-rose-500" href="/works">Work</a>
-                    <a className="font-medium text-gray-600 hover:text-rose-400 dark:text-neutral-400 dark:hover:text-rose-500" href="/teams">Team</a>
-                    <a className="font-medium text-gray-600 hover:text-rose-400 dark:text-neutral-400 dark:hover:text-rose-500" href="/blogs">Blog</a>
-                    <a className="font-medium text-gray-600 hover:text-rose-400 dark:text-neutral-400 dark:hover:text-rose-500" href="https://careers.energeek.id" target='_blank'>Career</a>
+                    <NavLink
+                    exact
+                    className="font-medium text-gray-600 hover:text-rose-400 dark:text-neutral-400 dark:hover:text-rose-500" to="/works"
+                    activeClassName="active" >
+                      Work
+                    </NavLink>
+                    <NavLink
+                    exact
+                    className="font-medium text-gray-600 hover:text-rose-400 dark:text-neutral-400 dark:hover:text-rose-500" to="/teams"
+                    activeClassName="active" >
+                      Team
+                    </NavLink>
+                    <NavLink
+                    exact
+                    className="font-medium text-gray-600 hover:text-rose-400 dark:text-neutral-400 dark:hover:text-rose-500" to="/blogs"
+                    activeClassName="active" >
+                      Blog
+                    </NavLink>
+                    <a className="font-medium text-gray-600 hover:text-rose-400 dark:text-neutral-400 dark:hover:text-rose-500 flex items-center" href="https://careers.energeek.id" target='_blank'>Career <ArrowUpRight className='w-4 h-4 ml-1' /></a>
                   </div>
                 </DrawerContent>
               </Drawer>
               
               <div className='lg:w-[126px] w-fit'>
                 <Button className='rounded-2xl'>
-                  Contact
+                  Contact Us
                 </Button>
               </div>
             </div>
@@ -54,10 +71,25 @@ export default function Header() {
             {/* Navigation di desktop */}
             <div className="hidden sm:block sm:order-2">
               <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:ps-5">
-                <a className="font-medium text-gray-600 hover:text-rose-400 dark:text-neutral-400 dark:hover:text-rose-500" href="/works">Work</a>
-                <a className="font-medium text-gray-600 hover:text-rose-400 dark:text-neutral-400 dark:hover:text-rose-500" href="/teams">Team</a>
-                <a className="font-medium text-gray-600 hover:text-rose-400 dark:text-neutral-400 dark:hover:text-rose-500" href="/blogs">Blog</a>
-                <a className="font-medium text-gray-600 hover:text-rose-400 dark:text-neutral-400 dark:hover:text-rose-500" href="https://careers.energeek.id" target='_blank'>Career</a>
+                <NavLink
+                  exact
+                  className="font-medium text-[1rem] text-gray-600 hover:text-rose-400 dark:text-neutral-400 dark:hover:text-rose-500" to="/works" 
+                  activeClassName="active" 
+                  >Work
+                </NavLink>
+                <NavLink
+                  exact
+                  className="font-medium text-[1rem] text-gray-600 hover:text-rose-400 dark:text-neutral-400 dark:hover:text-rose-500" to="/teams" 
+                  activeClassName="active" 
+                  >Team
+                </NavLink>
+                <NavLink
+                  exact
+                  className="font-medium text-[1rem] text-gray-600 hover:text-rose-400 dark:text-neutral-400 dark:hover:text-rose-500" to="/blogs" 
+                  activeClassName="active" 
+                  >Blog
+                </NavLink>
+                <a className="font-medium text-[1rem] text-gray-600 hover:text-rose-400 dark:text-neutral-400 dark:hover:text-rose-500 flex items-center border px-3 py-2 rounded-full" href="https://careers.energeek.id" target='_blank'>Career <ArrowUpRight className='w-4 h-4 ml-1' /> </a>
               </div>
             </div>
           </nav>

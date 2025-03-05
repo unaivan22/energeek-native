@@ -29,7 +29,7 @@ export default function Portfolios() {
             <h2 className='text-4xl lg:max-w-[500px] font-semibold'>OUR WORKS</h2>
             <p className='opacity-50 text-md lg:max-w-[500px]'>Berikut adalah beberapa aplikasi yang telah kami hasilkan, dan telah digunakan pada beberapa perusahaan BUMN dan Pemerintah Kota di Indonesia.</p>
           </div>
-          <Button className='rounded-full text-xl border-2 border-black px-6 py-10' size='lg' variant='outline'>Semua Project <ArrowUpRight className='w-4 h-4 ml-2' /> </Button>
+          <a href='/works'><Button className='rounded-full text-xl border-2 border-black px-6 py-10' size='lg' variant='outline'>Semua Project <ArrowUpRight className='w-4 h-4 ml-2' /> </Button></a>
         </div>
         <div className='grid lg:grid-cols-2 grid-cols-1 py-12 gap-6'>
           {projects.length > 0 ? (

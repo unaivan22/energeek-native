@@ -36,7 +36,7 @@ export default function Teams() {
         ))}
         </div>
         <div className='flex items-center justify-center pt-12'>
-          <Button className='rounded-full text-xl border-2 border-black px-6 py-10' size='lg' variant='outline'>Semua Teams <ArrowUpRight className='w-4 h-4 ml-2' /> </Button>
+          <a href='/teams'><Button className='rounded-full text-xl border-2 border-black px-6 py-10' size='lg' variant='outline'>Semua Teams <ArrowUpRight className='w-4 h-4 ml-2' /> </Button></a>
         </div>
       </div>
     </div>
