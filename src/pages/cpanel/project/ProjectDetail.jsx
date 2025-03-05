@@ -4,6 +4,7 @@ import axios from "axios";
 import { Helmet } from 'react-helmet';
 import Header from "@/pages/utils/Header";
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
+import AnimatedPage from "@/pages/utils/AnimatedPage";
 
 export default function ProjectDetail() {
   const { id } = useParams();
@@ -21,6 +22,7 @@ export default function ProjectDetail() {
 
   return (
     <div>
+      <AnimatedPage>
       <Header />
       <div className="container mx-auto lg:pb-12 pb-4 pt-32">
         <Helmet>
@@ -60,6 +62,7 @@ export default function ProjectDetail() {
         <div className="container pb-24">
           <div className="prose max-w-none" dangerouslySetInnerHTML={{ __html: project.description }} />
         </div>
+        </AnimatedPage>
     </div>
   );
 }

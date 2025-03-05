@@ -148,7 +148,7 @@ export default function AddProject() {
                 <Card className="w-full">
                     <CardHeader>
                         <CardTitle>Create new project</CardTitle>
-                        <CardDescription>Write in the forms below.</CardDescription>
+                        <CardDescription>Fill in the forms below.</CardDescription>
                     </CardHeader>
                     <CardContent>
                         <form onSubmit={handleSubmit}>

@@ -6,6 +6,8 @@ import Header from './utils/Header'
 import { SpinningText } from '@/components/motion-primitives/spinning-text'
 import { InfiniteSlider } from '@/components/ui/infinite-slider';
 import { ModeToggle } from '@/components/mode-toggle';
+import AnimatedPage from './utils/AnimatedPage';
+import ScrollToTop from './utils/ScrollToTop';
 
 export default function AllTeams() {
     const [teams, setTeams] = useState([]);
@@ -23,7 +25,9 @@ export default function AllTeams() {
     };
   return (
     <div>
+        <AnimatedPage>
         <Header />
+        <ScrollToTop />
         <div id='gridz' className='container min-h-screen flex flex-col items-center justify-center'>
             <div className='flex flex-col items-center justify-center gap-4'>
                 <h1 className='lg:text-[5rem] text-[2.5rem] lg:leading-[6rem] leading-[3rem] text-center font-semibold lg:px-32 px-6 w-full mt-12'>Our Teams</h1>
@@ -33,7 +37,7 @@ export default function AllTeams() {
                 {/* <Button className='rounded-full text-xl border-2 border-black' size='xxlg' variant='outline'>Contact Us <ArrowRight className='w-4 h-4 ml-2' /> </Button> */}
                 </div>
             </div>
-            <div className='absolute top-[30vh] left-[20vw]'>
+            <div className='absolute lg:top-[30vh] top-[26vh] left-[20vw]'>
                 <SpinningText
                     radius={5}
                     fontSize={1.2}
@@ -42,7 +46,7 @@ export default function AllTeams() {
                     {`Energeek • IT Consultant • Service • `}
                 </SpinningText>
             </div>
-            <div className='absolute bottom-[30vh] right-[20vw]'>
+            <div className='absolute lg:bottom-[30vh] bottom-[10vh] right-[20vw]'>
                 <SpinningText
                     radius={5}
                     fontSize={1.3}
@@ -100,6 +104,7 @@ export default function AllTeams() {
         <div className='fixed bottom-12 right-12'>
             <ModeToggle />
         </div>
+        </AnimatedPage>
     </div>
   )
 }

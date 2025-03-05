@@ -10,6 +10,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Header from './utils/Header';
 import { ModeToggle } from '@/components/mode-toggle';
+import AnimatedPage from './utils/AnimatedPage';
 
 export default function Home() {
   useEffect(() => {
@@ -19,6 +20,7 @@ export default function Home() {
   console.log('dibuat karena sudah capek dengan error wordpress, -- Una 4 Mar 2025')
   return (
     <div>
+      <AnimatedPage>
       <Header />
       {/* <div data-aos='fade-up'> */}
         <Jumbotron />
@@ -51,6 +53,7 @@ export default function Home() {
       <div className='fixed bottom-12 right-12'>
         <ModeToggle />
       </div>
+      </AnimatedPage>
     </div>
   )
 }
