@@ -43,7 +43,8 @@ export default function AllWorks() {
     }, []);
 
     const filteredProjects = projects.filter(project =>
-        project.name.toLowerCase().includes(searchTerm.toLowerCase())
+        project.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
+        project.client.toLowerCase().includes(searchTerm.toLowerCase())
       );
     
       // Pagination logic
@@ -204,7 +205,7 @@ export default function AllWorks() {
                     placeholder="Cari projects..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="p-2 border rounded rounded-lg max-w-full md:w-[400px] order-2 md:order-1 mb-6"
+                    className="p-2 border max-w-full md:w-[400px] order-2 md:order-1 mb-6"
                 />
             </div>
             <div className='grid lg:grid-cols-2 grid-cols-1 py-4 gap-6'>

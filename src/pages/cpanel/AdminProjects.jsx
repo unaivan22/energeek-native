@@ -48,7 +48,8 @@ export default function AdminProjects() {
   }, []);
 
   const filteredProjects = projects.filter(project =>
-    project.name.toLowerCase().includes(searchTerm.toLowerCase())
+    project.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    project.client.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   // Pagination logic

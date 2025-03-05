@@ -8,7 +8,7 @@ $uploadedFiles = [];
 foreach ($_FILES['screenshots']['tmp_name'] as $index => $tmpName) {
     $ext = pathinfo($_FILES['screenshots']['name'][$index], PATHINFO_EXTENSION);
     $newFileName = "screenshot-" . uniqid() . "." . $ext;
-    $targetPath = "http://localhost/api/uploads/" . $newFileName;
+    $targetPath = "uploads/" . $newFileName;
 
     if (move_uploaded_file($tmpName, $targetPath)) {
         $uploadedFiles[] = $targetPath;

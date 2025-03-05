@@ -63,8 +63,9 @@ export default function AdminTeams() {
   };
 
   const filteredTeams = teams.filter((team) =>
-    team.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+    team.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    team.role.toLowerCase().includes(searchTerm.toLowerCase())
+  );  
 
   return (
     <div className="py-6">

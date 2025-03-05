@@ -198,8 +198,8 @@ export default function EditProject() {
                                 <div className='flex flex-col gap-4 w-full'>
                                   <Input type="text" value={name} onChange={(e) => setName(e.target.value)} />
                                     <div className='flex gap-4'>
-                                      <Input type="number" value={year} onChange={(e) => setYear(e.target.value)} />
                                       <Input type="text" value={client} onChange={(e) => setClient(e.target.value)} />
+                                      <Input type="number" value={year} onChange={(e) => setYear(e.target.value)} />
                                     </div>
                                     <div className='flex flex-col gap-2 min-h-[280px]'>
                                         <label className="text-gray-600">Deskripsi</label>
