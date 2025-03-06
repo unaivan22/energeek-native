@@ -11,6 +11,7 @@ import 'aos/dist/aos.css';
 import Header from './utils/Header';
 import { ModeToggle } from '@/components/mode-toggle';
 import AnimatedPage from './utils/AnimatedPage';
+import BrutalistFooter from './misc/footers/BrutalistFooter';
 
 export default function Home() {
   useEffect(() => {
@@ -48,6 +49,10 @@ export default function Home() {
       
       <div data-aos='fade-up'>
         <Teams />
+      </div>
+
+      <div data-aos='fade-up'>
+        <BrutalistFooter />
       </div>
       
       <div className='fixed lg:bottom-12 bottom-8 lg:right-12 right-8'>
