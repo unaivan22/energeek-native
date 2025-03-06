@@ -17,7 +17,7 @@ export default function AllTeams() {
   
     const fetchTeams = async () => {
       try {
-        const res = await axios.get("http://localhost/api/getTeams.php");
+        const res = await axios.get("/api/getTeams.php");
         setTeams(res.data);
       } catch (error) {
         console.error("Error fetching teams:", error);
@@ -79,7 +79,7 @@ export default function AllTeams() {
             </div>
             </div>
         </div>
-        <div className='py-8 bg-[#DC2728]'>
+        <div className='py-8 bg-[#DC2728] w-screen overflow-x-hidden'>
             <InfiniteSlider speedOnHover={10} gap={32}>
                 <h5 className='text-3xl font-semibold text-white flex items-center gap-2'> <Asterisk className='w-6 h-6' /> Let's Grow With Us</h5>
                 <h5 className='text-3xl font-semibold text-white flex items-center gap-2'> <Asterisk className='w-6 h-6' /> Let's Grow With Us</h5>
@@ -101,7 +101,7 @@ export default function AllTeams() {
                 <h5 className='text-3xl font-semibold text-white flex items-center gap-2'> <Asterisk className='w-6 h-6' /> Let's Grow With Us</h5>
             </InfiniteSlider>
         </div>
-        <div className='fixed bottom-12 right-12'>
+        <div className='fixed lg:bottom-12 bottom-8 lg:right-12 right-8'>
             <ModeToggle />
         </div>
         </AnimatedPage>

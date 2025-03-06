@@ -14,7 +14,7 @@ export default function Daftar() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost/api/signup.php", form);
+      const res = await axios.post("/api/signup.php", form);
       if (res.data.success) navigate("/admin");
       else setError(res.data.message);
     } catch (err) {

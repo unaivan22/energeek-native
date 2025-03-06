@@ -50,7 +50,7 @@ export default function Home() {
         <Teams />
       </div>
       
-      <div className='fixed bottom-12 right-12'>
+      <div className='fixed lg:bottom-12 bottom-8 lg:right-12 right-8'>
         <ModeToggle />
       </div>
       </AnimatedPage>

@@ -34,7 +34,7 @@ export default function AdminProjects() {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const res = await axios.get("http://localhost/api/projects.php");
+        const res = await axios.get("/api/projects.php");
         setProjects(res.data);
       } catch (err) {
         console.error("Error fetching projects:", err);
@@ -138,7 +138,7 @@ const renderPagination = () => {
     <div className='py-6'>
       <div className="flex flex-row items-center pb-6 gap-4">
         <h1 className="text-xl font-semibold">Daftar Project</h1>
-        <a href="/project/add">
+        <a href="/#/project/add">
           <Button className='rounded-xl'>Add New</Button>
         </a>
       </div>
@@ -178,7 +178,7 @@ const renderPagination = () => {
                     <TableCell>{project.client}</TableCell>
                     <TableCell dangerouslySetInnerHTML={{ __html: project.description }}></TableCell>
                     <TableCell className='text-center'>
-                      <a href={`/admin/project/edit/${project.id}`}>
+                      <a href={`/#/admin/project/edit/${project.id}`}>
                         <Button variant='outline' className='rounded-2xl'>Edit</Button>
                       </a>
                     </TableCell>

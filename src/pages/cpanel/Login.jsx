@@ -15,7 +15,7 @@ const Login = () => {
 
   const handleLogin = async () => {
     try {
-      const response = await fetch('http://localhost/api/login.php', {
+      const response = await fetch('/api/login.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password }),
@@ -40,7 +40,7 @@ const Login = () => {
 
   const handleSignUp = async () => {
     try {
-      const response = await fetch('http://localhost/api/signup.php', {
+      const response = await fetch('/api/signup.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include', // Ensure credentials are included for CORS

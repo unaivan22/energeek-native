@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 
 import Home from './Home'
 import Admin from './cpanel/Admin'
@@ -23,7 +23,7 @@ export default function RouterPage() {
               element={isAuthenticated ? <Admin /> : <Navigate to="/login" />} 
             />
             
-            <Route path="/Login" element={<Login />} />
+            <Route path="/login" element={<Login />} />
             {/* <Route path='/admin' element={<Admin/>} /> */}
 
             <Route 

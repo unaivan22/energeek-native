@@ -10,7 +10,7 @@ import {
 
 export default function Services() {
   return (
-    <div className='bg-stone-100 dark:bg-stone-900'>
+    <div className='bg-stone-100 dark:bg-stone-900' id='ourservices'>
       <div className='container py-32'>
         <div className='flex flex-col gap-2'>
           <h2 className='text-4xl lg:max-w-[500px] font-semibold'>Advanced Solutions Tailored to Your Needs</h2>

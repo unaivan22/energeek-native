@@ -11,7 +11,7 @@ export default function ProjectDetail() {
   const [project, setProject] = useState(null);
 
   useEffect(() => {
-    axios.get(`http://localhost/api/get_project.php?id=${id}`).then((res) => {
+    axios.get(`/api/get_project.php?id=${id}`).then((res) => {
       if (res.data.success) {
         setProject(res.data.project);
       }
@@ -39,13 +39,13 @@ export default function ProjectDetail() {
         <h1 className="lg:text-[4rem] text-[2rem] font-bold mb-6 text-center">{project.name}</h1>
         </div>
 
-        <div className="pt-4 pb-12">
+        <div className="pt-4 pb-12 w-screen overflow-x-hidden">
           <div className="container">
             <img src={project.thumbnail} alt={project.name} className="w-full rounded-lg shadow-lg mb-6" />
           </div>
           <InfiniteSlider speedOnHover={10} gap={32}>
             {JSON.parse(project.screenshots || "[]").map((img, index) => (
-              <img key={index} src={`http://localhost/api/${img}`} alt={`Screenshot ${index + 1}`} className="w-full lg:h-[250px] h-[180px] rounded-lg shadow" />
+              <img key={index} src={`/api/${img}`} alt={`Screenshot ${index + 1}`} className="w-full lg:h-[250px] h-[180px] rounded-lg shadow" />
             ))}
           </InfiniteSlider>
         </div>
@@ -54,7 +54,7 @@ export default function ProjectDetail() {
           <img src={project.thumbnail} alt={project.name} className="w-full rounded-lg shadow-lg mb-6" />
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {JSON.parse(project.screenshots || "[]").map((img, index) => (
-              <img key={index} src={`http://localhost/api/${img}`} alt={`Screenshot ${index + 1}`} className="w-full rounded-lg shadow" />
+              <img key={index} src={`/api/${img}`} alt={`Screenshot ${index + 1}`} className="w-full rounded-lg shadow" />
             ))}
           </div>
         </div> */}

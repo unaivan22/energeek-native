@@ -184,6 +184,11 @@
 }
 
 @layer utilities {
+  body{
+    width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+
   #gridx::before {
     --line: hwb(0 79% 21% / 0.3);
     --size: 60px;

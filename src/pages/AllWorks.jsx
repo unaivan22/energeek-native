@@ -29,7 +29,7 @@ export default function AllWorks() {
     useEffect(() => {
       const fetchProjects = async () => {
         try {
-          const res = await axios.get("http://localhost/api/projects.php");
+          const res = await axios.get("/api/projects.php");
           setProjects(res.data);
         } catch (err) {
           console.error("Error fetching projects:", err);
@@ -169,7 +169,7 @@ export default function AllWorks() {
                 </SpinningText>
             </div>
         </div>
-        <div className='py-8 bg-[#DC2728]'>
+        <div className='py-8 bg-[#DC2728] w-screen overflow-x-hidden'>
             <InfiniteSlider speedOnHover={10} gap={32}>
                 <h5 className='text-3xl font-semibold text-white flex items-center gap-2'> <Asterisk className='w-6 h-6' /> Let's Grow With Us</h5>
                 <h5 className='text-3xl font-semibold text-white flex items-center gap-2'> <Asterisk className='w-6 h-6' /> Let's Grow With Us</h5>
@@ -210,7 +210,7 @@ export default function AllWorks() {
             </div>
             <div className='grid lg:grid-cols-2 grid-cols-1 py-4 gap-6'>
                 {projects.length > 0 ? (
-                paginatedProjects.map((project) => (
+                projects.map((project) => (
                     <Link to={`/project/${project.id}`} >
                     <div key={project.id} className='border border-black bg-stone-100 dark:bg-black flex flex-col rounded-xl p-6 gap-4 shadow-[6px_6px_0px_rgba(0,0,0,1)] hover:shadow-[10px_10px_0px_rgba(0,0,0,1)] cursor-pointer'>
                     <h1 className='text-3xl font-semibold line-clamp-2'>{project.name}</h1>
@@ -278,7 +278,7 @@ export default function AllWorks() {
                 </div>
             </div>
         </div>
-        <div className='fixed bottom-12 right-12'>
+        <div className='fixed lg:bottom-12 bottom-8 lg:right-12 right-8'>
             <ModeToggle />
         </div>
         </AnimatedPage>

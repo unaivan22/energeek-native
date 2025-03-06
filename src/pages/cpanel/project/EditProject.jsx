@@ -38,7 +38,7 @@ export default function EditProject() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
-    axios.get(`http://localhost/api/project.php?id=${id}`).then((res) => {
+    axios.get(`/api/project.php?id=${id}`).then((res) => {
       setProject(res.data);
       setName(res.data.name);
       setDescription(res.data.description);
@@ -65,7 +65,7 @@ export default function EditProject() {
   
         console.log("Mengupload thumbnail...", thumbnail);
   
-        const uploadRes = await axios.post("http://localhost/api/upload_thumbnail.php", formData, {
+        const uploadRes = await axios.post("/api/upload_thumbnail.php", formData, {
           headers: { "Content-Type": "multipart/form-data" },
         });
   
@@ -83,7 +83,7 @@ export default function EditProject() {
   
         console.log("Mengupload screenshots...", newScreenshots);
   
-        const uploadRes = await axios.post("http://localhost/api/upload_screenshots.php", formData, {
+        const uploadRes = await axios.post("/api/upload_screenshots.php", formData, {
           headers: { "Content-Type": "multipart/form-data" },
         });
   
@@ -127,7 +127,7 @@ export default function EditProject() {
     formData.append("id", id); // Kirim ID project
   
     try {
-      const response = await axios.post("http://localhost/api/upload_thumbnail.php", formData, {
+      const response = await axios.post("/api/upload_thumbnail.php", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
   
@@ -216,7 +216,7 @@ export default function EditProject() {
                                         <label className="text-gray-600">Screenshot Project <span className='text-xs text-rose-500'>*Must .webp format for size optimize</span></label>
                                           <div className="flex gap-2 flex-wrap">
                                             {screenshots.map((s, index) => (
-                                              <img key={index} src={`http://localhost/api/${s}`} alt="Screenshot" className="w-[150px] h-[150px] object-cover" />
+                                              <img key={index} src={`/api/${s}`} alt="Screenshot" className="w-[150px] h-[150px] object-cover" />
                                             ))}
                                           </div>
                                           <Input type="file" multiple accept=".webp" onChange={handleFileChange} />

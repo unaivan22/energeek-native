@@ -77,7 +77,7 @@ export default function AddProject() {
             if (thumbnailFile) {
                 const formData = new FormData();
                 formData.append("file", thumbnailFile);
-                const uploadRes = await axios.post("http://localhost/api/upload.php", formData, {
+                const uploadRes = await axios.post("/api/upload.php", formData, {
                     headers: { "Content-Type": "multipart/form-data" },
                 });
                 thumbnailUrl = uploadRes.data.url;
@@ -87,7 +87,7 @@ export default function AddProject() {
             if (screenshotFiles.length > 0) {
                 const formData = new FormData();
                 screenshotFiles.forEach(file => formData.append("screenshots[]", file));
-                const uploadRes = await axios.post("http://localhost/api/upload_screenshots.php", formData, {
+                const uploadRes = await axios.post("/api/upload_screenshots.php", formData, {
                     headers: { "Content-Type": "multipart/form-data" },
                 });
                 screenshotUrls = uploadRes.data.urls;
@@ -101,7 +101,7 @@ export default function AddProject() {
 
             console.log("Payload yang dikirim:", payload);
 
-            const res = await axios.post("http://localhost/api/projects.php", payload);
+            const res = await axios.post("/api/projects.php", payload);
 
             console.log("Server response:", res.data);
 

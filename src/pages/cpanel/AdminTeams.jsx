@@ -19,7 +19,7 @@ export default function AdminTeams() {
 
   const fetchTeams = async () => {
     try {
-      const res = await axios.get("http://localhost/api/getTeams.php");
+      const res = await axios.get("/api/getTeams.php");
       setTeams(res.data);
     } catch (error) {
       console.error("Error fetching teams:", error);
@@ -45,7 +45,7 @@ export default function AdminTeams() {
       formData.append("email", editData.email);
       if (file) formData.append("file", file);
 
-      const res = await axios.post("http://localhost/api/updateTeam.php", formData, {
+      const res = await axios.post("/api/updateTeam.php", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
@@ -71,7 +71,7 @@ export default function AdminTeams() {
     <div className="py-6">
       <div className="flex flex-row items-center pb-6 gap-4">
         <h1 className="text-xl font-semibold">Daftar Teams</h1>
-        <a href="/team/add">
+        <a href="/#/team/add">
           <Button className='rounded-xl'>Add New</Button>
         </a>
       </div>

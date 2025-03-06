@@ -66,7 +66,7 @@ export default function AddTeam() {
             if (file) {
                 const formData = new FormData();
                 formData.append("file", file);
-                const uploadRes = await axios.post("http://localhost/api/uploadteam.php", formData, {
+                const uploadRes = await axios.post("/api/uploadteam.php", formData, {
                     headers: { "Content-Type": "multipart/form-data" },
                 });
                 photoUrl = uploadRes.data.url;
@@ -76,7 +76,7 @@ export default function AddTeam() {
     
             console.log("Payload yang dikirim:", payload); // 🔍 Debugging di frontend
     
-            const res = await axios.post("http://localhost/api/teams.php", payload);
+            const res = await axios.post("/api/teams.php", payload);
     
             console.log("Server response:", res.data); // 🔍 Debugging response dari backend
     
