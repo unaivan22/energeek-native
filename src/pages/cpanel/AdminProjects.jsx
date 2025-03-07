@@ -161,8 +161,8 @@ const renderPagination = () => {
                 <TableHead className='w-[120px]'>Thumbnail</TableHead>
                 <TableHead>Nama</TableHead>
                 <TableHead className='w-[120px]'>Year</TableHead>
-                <TableHead className='w-[200px]'>Client</TableHead>
-                <TableHead>Deskripsi</TableHead>
+                <TableHead>Client</TableHead>
+                {/* <TableHead>Deskripsi</TableHead> */}
                 <TableHead className='w-[120px] text-center'>*</TableHead>
               </TableRow>
             </TableHeader>
@@ -176,7 +176,7 @@ const renderPagination = () => {
                     <TableCell className="font-medium">{project.name}</TableCell>
                     <TableCell>{project.year}</TableCell>
                     <TableCell>{project.client}</TableCell>
-                    <TableCell dangerouslySetInnerHTML={{ __html: project.description }}></TableCell>
+                    {/* <TableCell className='h-[100px]' dangerouslySetInnerHTML={{ __html: project.description }}></TableCell> */}
                     <TableCell className='text-center'>
                       <a href={`/#/admin/project/edit/${project.id}`}>
                         <Button variant='outline' className='rounded-2xl'>Edit</Button>

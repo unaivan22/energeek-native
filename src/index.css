@@ -342,6 +342,10 @@
     font-size: 3rem !important;
     font-weight: bold;
   }
+
+  .quill-detailnya img{
+    width: 100% !important;
+  }
   
 }
 

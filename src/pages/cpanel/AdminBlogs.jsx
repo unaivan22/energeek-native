@@ -48,8 +48,7 @@ export default function AdminBlogs() {
   }, []);
 
   const filteredProjects = projects.filter(project =>
-    project.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    project.client.toLowerCase().includes(searchTerm.toLowerCase())
+    project.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   // Pagination logic
@@ -134,6 +133,11 @@ const renderPagination = () => {
     return pages;
   };
 
+  const formatDate = (dateString) => {
+    const date = new Date(dateString);
+    return new Intl.DateTimeFormat("id-ID", { day: "2-digit", month: "long", year: "numeric" }).format(date);
+  };
+
   return (
     <div className='py-6'>
       <div className="flex flex-row items-center pb-6 gap-4">
@@ -160,19 +164,21 @@ const renderPagination = () => {
               <TableRow>
                 <TableHead className='w-[120px]'>Thumbnail</TableHead>
                 <TableHead>Nama</TableHead>
-                <TableHead>Deskripsi</TableHead>
+                {/* <TableHead>Deskripsi</TableHead> */}
+                <TableHead>Tanggal</TableHead>
                 <TableHead className='w-[120px] text-center'>*</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
-              {projects.length > 0 ? (
+              {paginatedProjects.length > 0 ? (
                 paginatedProjects.map((project) => (
                   <TableRow key={project.id}>
                     <TableCell>
                       <img src={project.thumbnail} alt={project.nama} className="w-20 h-12 object-cover rounded" />
                     </TableCell>
                     <TableCell className="font-medium">{project.name}</TableCell>
-                    <TableCell dangerouslySetInnerHTML={{ __html: project.description }}></TableCell>
+                    {/* <TableCell className='' dangerouslySetInnerHTML={{ __html: project.description }}></TableCell> */}
+                    <TableCell>{formatDate(project.created_at)}</TableCell>
                     <TableCell className='text-center'>
                       <a href={`/#/admin/blog/edit/${project.id}`}>
                         <Button variant='outline' className='rounded-2xl'>Edit</Button>

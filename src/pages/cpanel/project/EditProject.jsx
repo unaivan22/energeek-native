@@ -62,6 +62,7 @@ export default function EditProject() {
       if (thumbnail) {
         const formData = new FormData();
         formData.append("file", thumbnail);
+        formData.append("id", id); // Kirim ID blog
   
         console.log("Mengupload thumbnail...", thumbnail);
   
@@ -116,34 +117,6 @@ export default function EditProject() {
     }
   };  
   
-  // const handleThumbnailUpload = async () => {
-  //   if (!thumbnail) {
-  //     console.error("File tidak dipilih");
-  //     return;
-  //   }
-  
-  //   const formData = new FormData();
-  //   formData.append("file", thumbnail);
-  //   formData.append("id", id); // Kirim ID project
-  
-  //   try {
-  //     const response = await axios.post("/api/upload_thumbnail.php", formData, {
-  //       headers: { "Content-Type": "multipart/form-data" },
-  //     });
-  
-  //     console.log("Response:", response.data);
-  //     if (response.data.success) {
-  //       setProject((prev) => ({ ...prev, thumbnail: response.data.fileUrl }));
-  //       alert("Thumbnail berhasil diupload!");
-  //     } else {
-  //       console.error(response.data.error);
-  //     }
-  //   } catch (error) {
-  //     console.error("Error:", error);
-  //   }
-  // };
-  
-
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768); // Change the breakpoint as per your needs
@@ -241,28 +214,6 @@ export default function EditProject() {
             </div>
             }
         </div>
-
-
-        {/* <form onSubmit={handleSubmit} className="p-4">
-      <input type="text" value={name} onChange={(e) => setName(e.target.value)} required />
-      <input type="text" value={description} onChange={(e) => setDescription(e.target.value)} required />
-      <input type="number" value={year} onChange={(e) => setYear(e.target.value)} required />
-      <input type="text" value={client} onChange={(e) => setClient(e.target.value)} required />
-
-      <p>Thumbnail:</p>
-{project.thumbnail && <img src={project.thumbnail} alt="Thumbnail" className="w-20 h-12" />}
-<input type="file" accept=".webp" onChange={(e) => setThumbnail(e.target.files[0])} />
-<button type="button" onClick={handleThumbnailUpload}>Upload Thumbnail</button>
-
-
-      <p>Screenshots:</p>
-      {screenshots.map((s, index) => (
-        <img key={index} src={s} alt="Screenshot" className="w-20 h-12" />
-      ))}
-      <input type="file" multiple accept=".webp" onChange={handleFileChange} />
-
-      <button type="submit">Update</button>
-    </form> */}
     </div>
   ) : (
     <p>Loading...</p>

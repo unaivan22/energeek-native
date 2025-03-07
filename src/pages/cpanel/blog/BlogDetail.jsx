@@ -51,7 +51,7 @@ export default function BlogDetail() {
           </div>
         </div>
 
-        <div className="container pb-24">
+        <div className="container pb-[32vh]">
           <div className="prose max-w-none quill-detailnya" dangerouslySetInnerHTML={{ __html: blog.description }} />
         </div>
         </AnimatedPage>
