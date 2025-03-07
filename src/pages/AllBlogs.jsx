@@ -19,6 +19,7 @@ import { Link } from 'react-router-dom';
 import AnimatedPage from './utils/AnimatedPage';
 import ScrollToTop from './utils/ScrollToTop';
 import { Input } from '@/components/ui/input';
+import Footer from './utils/Footer';
 
 export default function AllBlogs() {
     const [blogs, setBlogs] = useState([]);
@@ -283,6 +284,7 @@ export default function AllBlogs() {
             <ModeToggle />
         </div>
         </AnimatedPage>
+        <Footer />
     </div>
   )
 }

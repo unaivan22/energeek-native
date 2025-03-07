@@ -13,6 +13,7 @@ import { ModeToggle } from '@/components/mode-toggle';
 import AnimatedPage from './utils/AnimatedPage';
 import BrutalistFooter from './misc/footers/BrutalistFooter';
 import Blogs from './structure/Blogs';
+import Footer from './utils/Footer';
 
 export default function Home() {
   useEffect(() => {
@@ -56,9 +57,11 @@ export default function Home() {
         <Blogs />
       </div>
 
-      <div data-aos='fade-up'>
+      {/* <div data-aos='fade-up'>
         <BrutalistFooter />
-      </div>
+      </div> */}
+
+      <Footer />
       
       <div className='fixed lg:bottom-12 bottom-8 lg:right-12 right-8'>
         <ModeToggle />

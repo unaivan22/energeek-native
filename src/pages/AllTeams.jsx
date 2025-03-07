@@ -8,6 +8,7 @@ import { InfiniteSlider } from '@/components/ui/infinite-slider';
 import { ModeToggle } from '@/components/mode-toggle';
 import AnimatedPage from './utils/AnimatedPage';
 import ScrollToTop from './utils/ScrollToTop';
+import Footer from './utils/Footer';
 
 export default function AllTeams() {
     const [teams, setTeams] = useState([]);
@@ -105,6 +106,7 @@ export default function AllTeams() {
             <ModeToggle />
         </div>
         </AnimatedPage>
+        <Footer />
     </div>
   )
 }

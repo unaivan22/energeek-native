@@ -19,6 +19,7 @@ import { Link } from 'react-router-dom';
 import AnimatedPage from './utils/AnimatedPage';
 import ScrollToTop from './utils/ScrollToTop';
 import { Input } from '@/components/ui/input';
+import Footer from './utils/Footer';
 
 export default function AllWorks() {
     const [projects, setProjects] = useState([]);
@@ -280,6 +281,7 @@ const renderPagination = () => {
             <ModeToggle />
         </div>
         </AnimatedPage>
+        <Footer />
     </div>
   )
 }
