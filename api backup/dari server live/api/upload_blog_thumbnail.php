@@ -20,10 +20,10 @@ if (!isset($_FILES["file"]) || !isset($_POST["id"])) {
 
 $id = intval($_POST["id"]);
 $file = $_FILES["file"];
-$uploadDir = __DIR__ . "/uploads/";
+$uploadDir = __DIR__ . "/uploadblogs/";
 
 // Ambil thumbnail lama dari database
-$oldQuery = "SELECT thumbnail FROM projects WHERE id = ?";
+$oldQuery = "SELECT thumbnail FROM blogs WHERE id = ?";
 $stmt = $conn->prepare($oldQuery);
 $stmt->bind_param("i", $id);
 $stmt->execute();
@@ -36,7 +36,7 @@ $stmt->close();
 
 // Hapus file thumbnail lama jika ada
 if (!empty($oldThumbnail)) {
-    $oldFilePath = __DIR__ . "/uploads/" . basename($oldThumbnail);
+    $oldFilePath = __DIR__ . "/uploadblogs/" . basename($oldThumbnail);
     if (file_exists($oldFilePath)) {
         unlink($oldFilePath); // Hapus file lama
     }
@@ -44,12 +44,12 @@ if (!empty($oldThumbnail)) {
 
 // Proses upload thumbnail baru
 $fileExt = pathinfo($file["name"], PATHINFO_EXTENSION);
-$newFileName = "project-" . uniqid() . "." . $fileExt;
+$newFileName = "blog-thumbnail-" . uniqid() . "." . $fileExt;
 $filePath = $uploadDir . $newFileName;
 
 if (move_uploaded_file($file["tmp_name"], $filePath)) {
-    $fileUrl = "/api/uploads/" . $newFileName;
-    $updateQuery = "UPDATE projects SET thumbnail = ? WHERE id = ?";
+    $fileUrl = "/api/uploadblogs/" . $newFileName;
+    $updateQuery = "UPDATE blogs SET thumbnail = ? WHERE id = ?";
     $stmt = $conn->prepare($updateQuery);
     $stmt->bind_param("si", $fileUrl, $id);
 

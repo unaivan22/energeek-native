@@ -19,26 +19,25 @@ if ($conn->connect_error) {
     die(json_encode(["error" => "Koneksi database gagal: " . $conn->connect_error]));
 }
 
-// Tangani request POST (menambahkan team)
+// Tangani request POST (menambahkan blog)
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $data = json_decode(file_get_contents("php://input"), true);
     
     $name = $conn->real_escape_string($data["name"]);
-    $role = $conn->real_escape_string($data["role"]);
-    $email = $conn->real_escape_string($data["email"]);
-    $photo = $conn->real_escape_string($data["photo"]);
+    $thumbnail = $conn->real_escape_string($data["thumbnail"]);
+    $description = $conn->real_escape_string($data["description"]);
+    $created_at = date("Y-m-d H:i:s"); // Tambahkan timestamp saat ini
 
-    // Debug query sebelum dieksekusi
-    $sql = "INSERT INTO teams (name, role, email, photo) 
-            VALUES ('$name', '$role', '$email', '$photo')";
-
+    $sql = "INSERT INTO blogs (name, thumbnail, description, created_at) 
+            VALUES ('$name', '$thumbnail', '$description', '$created_at')";
 
     if ($conn->query($sql) === TRUE) {
-        echo json_encode(["success" => true, "message" => "Team berhasil ditambahkan"]);
+        echo json_encode(["success" => true, "message" => "Blog berhasil ditambahkan"]);
     } else {
-        echo json_encode(["error" => "Gagal menambahkan teams dari BE: " . $conn->error]);
+        echo json_encode(["error" => "Gagal menambahkan blog: " . $conn->error]);
     }
 }
+
 
 $conn->close();
 ?>

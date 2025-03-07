@@ -347,3 +347,175 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /home/eneg1777/public_html/ebrutalism/api/updateTeam.php on line 29
+[07-Mar-2025 08:30:34 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/eneg1777/public_html/ebrutalism/api/blogs.php:37
+Stack trace:
+#0 {main}
+  thrown in /home/eneg1777/public_html/ebrutalism/api/blogs.php on line 37
+[07-Mar-2025 08:30:36 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/eneg1777/public_html/ebrutalism/api/blogs.php:37
+Stack trace:
+#0 {main}
+  thrown in /home/eneg1777/public_html/ebrutalism/api/blogs.php on line 37
+[07-Mar-2025 08:30:49 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/eneg1777/public_html/ebrutalism/api/blogs.php:37
+Stack trace:
+#0 {main}
+  thrown in /home/eneg1777/public_html/ebrutalism/api/blogs.php on line 37
+[07-Mar-2025 08:31:16 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/eneg1777/public_html/ebrutalism/api/blogs.php:35
+Stack trace:
+#0 {main}
+  thrown in /home/eneg1777/public_html/ebrutalism/api/blogs.php on line 35
+[07-Mar-2025 08:31:17 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/eneg1777/public_html/ebrutalism/api/blogs.php:35
+Stack trace:
+#0 {main}
+  thrown in /home/eneg1777/public_html/ebrutalism/api/blogs.php on line 35
+[07-Mar-2025 08:31:18 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/eneg1777/public_html/ebrutalism/api/blogs.php:35
+Stack trace:
+#0 {main}
+  thrown in /home/eneg1777/public_html/ebrutalism/api/blogs.php on line 35
+[07-Mar-2025 08:31:18 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/eneg1777/public_html/ebrutalism/api/blogs.php:35
+Stack trace:
+#0 {main}
+  thrown in /home/eneg1777/public_html/ebrutalism/api/blogs.php on line 35
+[07-Mar-2025 08:35:58 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/eneg1777/public_html/ebrutalism/api/getBlogs.php:26
+Stack trace:
+#0 {main}
+  thrown in /home/eneg1777/public_html/ebrutalism/api/getBlogs.php on line 26
+[07-Mar-2025 08:39:07 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/eneg1777/public_html/ebrutalism/api/getBlogs.php:26
+Stack trace:
+#0 {main}
+  thrown in /home/eneg1777/public_html/ebrutalism/api/getBlogs.php on line 26
+[07-Mar-2025 08:39:07 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/eneg1777/public_html/ebrutalism/api/getBlogs.php:26
+Stack trace:
+#0 {main}
+  thrown in /home/eneg1777/public_html/ebrutalism/api/getBlogs.php on line 26
+[07-Mar-2025 08:42:16 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/eneg1777/public_html/ebrutalism/api/getBlogs.php:26
+Stack trace:
+#0 {main}
+  thrown in /home/eneg1777/public_html/ebrutalism/api/getBlogs.php on line 26
+[07-Mar-2025 08:42:17 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/eneg1777/public_html/ebrutalism/api/getBlogs.php:26
+Stack trace:
+#0 {main}
+  thrown in /home/eneg1777/public_html/ebrutalism/api/getBlogs.php on line 26
+[07-Mar-2025 08:42:46 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/eneg1777/public_html/ebrutalism/api/getBlogs.php:26
+Stack trace:
+#0 {main}
+  thrown in /home/eneg1777/public_html/ebrutalism/api/getBlogs.php on line 26
+[07-Mar-2025 08:43:17 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/eneg1777/public_html/ebrutalism/api/getBlogs.php:26
+Stack trace:
+#0 {main}
+  thrown in /home/eneg1777/public_html/ebrutalism/api/getBlogs.php on line 26
+[07-Mar-2025 08:48:43 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/eneg1777/public_html/ebrutalism/api/getBlogs.php:26
+Stack trace:
+#0 {main}
+  thrown in /home/eneg1777/public_html/ebrutalism/api/getBlogs.php on line 26
+[07-Mar-2025 08:48:43 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/eneg1777/public_html/ebrutalism/api/getBlogs.php:26
+Stack trace:
+#0 {main}
+  thrown in /home/eneg1777/public_html/ebrutalism/api/getBlogs.php on line 26
+[07-Mar-2025 08:48:47 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/eneg1777/public_html/ebrutalism/api/getBlogs.php:26
+Stack trace:
+#0 {main}
+  thrown in /home/eneg1777/public_html/ebrutalism/api/getBlogs.php on line 26
+[07-Mar-2025 08:48:49 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/eneg1777/public_html/ebrutalism/api/getBlogs.php:26
+Stack trace:
+#0 {main}
+  thrown in /home/eneg1777/public_html/ebrutalism/api/getBlogs.php on line 26
+[07-Mar-2025 08:50:46 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/eneg1777/public_html/ebrutalism/api/getBlogs.php:26
+Stack trace:
+#0 {main}
+  thrown in /home/eneg1777/public_html/ebrutalism/api/getBlogs.php on line 26
+[07-Mar-2025 08:50:47 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/eneg1777/public_html/ebrutalism/api/getBlogs.php:26
+Stack trace:
+#0 {main}
+  thrown in /home/eneg1777/public_html/ebrutalism/api/getBlogs.php on line 26
+[07-Mar-2025 08:51:10 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/eneg1777/public_html/ebrutalism/api/getBlogs.php:26
+Stack trace:
+#0 {main}
+  thrown in /home/eneg1777/public_html/ebrutalism/api/getBlogs.php on line 26
+[07-Mar-2025 08:51:10 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/eneg1777/public_html/ebrutalism/api/getBlogs.php:26
+Stack trace:
+#0 {main}
+  thrown in /home/eneg1777/public_html/ebrutalism/api/getBlogs.php on line 26
+[07-Mar-2025 09:25:54 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/eneg1777/public_html/ebrutalism/api/getBlogs.php:26
+Stack trace:
+#0 {main}
+  thrown in /home/eneg1777/public_html/ebrutalism/api/getBlogs.php on line 26
+[07-Mar-2025 09:25:54 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/eneg1777/public_html/ebrutalism/api/getBlogs.php:26
+Stack trace:
+#0 {main}
+  thrown in /home/eneg1777/public_html/ebrutalism/api/getBlogs.php on line 26
+[07-Mar-2025 09:25:56 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/eneg1777/public_html/ebrutalism/api/getBlogs.php:26
+Stack trace:
+#0 {main}
+  thrown in /home/eneg1777/public_html/ebrutalism/api/getBlogs.php on line 26
+[07-Mar-2025 09:25:56 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/eneg1777/public_html/ebrutalism/api/getBlogs.php:26
+Stack trace:
+#0 {main}
+  thrown in /home/eneg1777/public_html/ebrutalism/api/getBlogs.php on line 26
+[07-Mar-2025 10:12:52 Asia/Jakarta] PHP Warning:  Use of undefined constant blog - assumed 'blog' (this will throw an Error in a future version of PHP) in /home/eneg1777/public_html/ebrutalism/api/get_blog.php on line 17
+[07-Mar-2025 10:12:52 Asia/Jakarta] PHP Warning:  Use of undefined constant blog - assumed 'blog' (this will throw an Error in a future version of PHP) in /home/eneg1777/public_html/ebrutalism/api/get_blog.php on line 17
+[07-Mar-2025 10:12:53 Asia/Jakarta] PHP Warning:  Use of undefined constant blog - assumed 'blog' (this will throw an Error in a future version of PHP) in /home/eneg1777/public_html/ebrutalism/api/get_blog.php on line 17
+[07-Mar-2025 10:12:53 Asia/Jakarta] PHP Warning:  Use of undefined constant blog - assumed 'blog' (this will throw an Error in a future version of PHP) in /home/eneg1777/public_html/ebrutalism/api/get_blog.php on line 17
+[07-Mar-2025 10:13:24 Asia/Jakarta] PHP Warning:  Use of undefined constant blog - assumed 'blog' (this will throw an Error in a future version of PHP) in /home/eneg1777/public_html/ebrutalism/api/get_blog.php on line 17
+[07-Mar-2025 10:13:24 Asia/Jakarta] PHP Warning:  Use of undefined constant blog - assumed 'blog' (this will throw an Error in a future version of PHP) in /home/eneg1777/public_html/ebrutalism/api/get_blog.php on line 17
+[07-Mar-2025 10:13:27 Asia/Jakarta] PHP Warning:  Use of undefined constant blog - assumed 'blog' (this will throw an Error in a future version of PHP) in /home/eneg1777/public_html/ebrutalism/api/get_blog.php on line 17
+[07-Mar-2025 10:13:27 Asia/Jakarta] PHP Warning:  Use of undefined constant blog - assumed 'blog' (this will throw an Error in a future version of PHP) in /home/eneg1777/public_html/ebrutalism/api/get_blog.php on line 17
+[07-Mar-2025 10:14:11 Asia/Jakarta] PHP Warning:  Use of undefined constant blog - assumed 'blog' (this will throw an Error in a future version of PHP) in /home/eneg1777/public_html/ebrutalism/api/get_blog.php on line 17
+[07-Mar-2025 10:14:11 Asia/Jakarta] PHP Warning:  Use of undefined constant blog - assumed 'blog' (this will throw an Error in a future version of PHP) in /home/eneg1777/public_html/ebrutalism/api/get_blog.php on line 17
+[07-Mar-2025 10:14:12 Asia/Jakarta] PHP Warning:  Use of undefined constant blog - assumed 'blog' (this will throw an Error in a future version of PHP) in /home/eneg1777/public_html/ebrutalism/api/get_blog.php on line 17
+[07-Mar-2025 10:14:12 Asia/Jakarta] PHP Warning:  Use of undefined constant blog - assumed 'blog' (this will throw an Error in a future version of PHP) in /home/eneg1777/public_html/ebrutalism/api/get_blog.php on line 17
+[07-Mar-2025 10:14:13 Asia/Jakarta] PHP Warning:  Use of undefined constant blog - assumed 'blog' (this will throw an Error in a future version of PHP) in /home/eneg1777/public_html/ebrutalism/api/get_blog.php on line 17
+[07-Mar-2025 10:14:13 Asia/Jakarta] PHP Warning:  Use of undefined constant blog - assumed 'blog' (this will throw an Error in a future version of PHP) in /home/eneg1777/public_html/ebrutalism/api/get_blog.php on line 17
+[07-Mar-2025 10:14:23 Asia/Jakarta] PHP Warning:  Use of undefined constant blog - assumed 'blog' (this will throw an Error in a future version of PHP) in /home/eneg1777/public_html/ebrutalism/api/get_blog.php on line 17
+[07-Mar-2025 10:14:23 Asia/Jakarta] PHP Warning:  Use of undefined constant blog - assumed 'blog' (this will throw an Error in a future version of PHP) in /home/eneg1777/public_html/ebrutalism/api/get_blog.php on line 17
+[07-Mar-2025 10:14:41 Asia/Jakarta] PHP Warning:  Use of undefined constant blog - assumed 'blog' (this will throw an Error in a future version of PHP) in /home/eneg1777/public_html/ebrutalism/api/get_blog.php on line 17
+[07-Mar-2025 10:14:41 Asia/Jakarta] PHP Warning:  Use of undefined constant blog - assumed 'blog' (this will throw an Error in a future version of PHP) in /home/eneg1777/public_html/ebrutalism/api/get_blog.php on line 17
+[07-Mar-2025 10:14:47 Asia/Jakarta] PHP Warning:  Use of undefined constant blog - assumed 'blog' (this will throw an Error in a future version of PHP) in /home/eneg1777/public_html/ebrutalism/api/get_blog.php on line 17
+[07-Mar-2025 10:14:47 Asia/Jakarta] PHP Warning:  Use of undefined constant blog - assumed 'blog' (this will throw an Error in a future version of PHP) in /home/eneg1777/public_html/ebrutalism/api/get_blog.php on line 17
+[07-Mar-2025 10:14:51 Asia/Jakarta] PHP Warning:  Use of undefined constant blog - assumed 'blog' (this will throw an Error in a future version of PHP) in /home/eneg1777/public_html/ebrutalism/api/get_blog.php on line 17
+[07-Mar-2025 10:14:51 Asia/Jakarta] PHP Warning:  Use of undefined constant blog - assumed 'blog' (this will throw an Error in a future version of PHP) in /home/eneg1777/public_html/ebrutalism/api/get_blog.php on line 17
+[07-Mar-2025 10:14:56 Asia/Jakarta] PHP Warning:  Use of undefined constant blog - assumed 'blog' (this will throw an Error in a future version of PHP) in /home/eneg1777/public_html/ebrutalism/api/get_blog.php on line 17
+[07-Mar-2025 10:14:56 Asia/Jakarta] PHP Warning:  Use of undefined constant blog - assumed 'blog' (this will throw an Error in a future version of PHP) in /home/eneg1777/public_html/ebrutalism/api/get_blog.php on line 17
+[07-Mar-2025 10:15:00 Asia/Jakarta] PHP Warning:  Use of undefined constant blog - assumed 'blog' (this will throw an Error in a future version of PHP) in /home/eneg1777/public_html/ebrutalism/api/get_blog.php on line 17
+[07-Mar-2025 10:15:00 Asia/Jakarta] PHP Warning:  Use of undefined constant blog - assumed 'blog' (this will throw an Error in a future version of PHP) in /home/eneg1777/public_html/ebrutalism/api/get_blog.php on line 17
+[07-Mar-2025 10:15:06 Asia/Jakarta] PHP Warning:  Use of undefined constant blog - assumed 'blog' (this will throw an Error in a future version of PHP) in /home/eneg1777/public_html/ebrutalism/api/get_blog.php on line 17
+[07-Mar-2025 10:15:06 Asia/Jakarta] PHP Warning:  Use of undefined constant blog - assumed 'blog' (this will throw an Error in a future version of PHP) in /home/eneg1777/public_html/ebrutalism/api/get_blog.php on line 17
+[07-Mar-2025 10:16:45 Asia/Jakarta] PHP Warning:  Use of undefined constant blog - assumed 'blog' (this will throw an Error in a future version of PHP) in /home/eneg1777/public_html/ebrutalism/api/get_blog.php on line 17
+[07-Mar-2025 10:17:07 Asia/Jakarta] PHP Warning:  Use of undefined constant blog - assumed 'blog' (this will throw an Error in a future version of PHP) in /home/eneg1777/public_html/ebrutalism/api/get_blog.php on line 17
+[07-Mar-2025 10:18:12 Asia/Jakarta] PHP Warning:  Use of undefined constant blog - assumed 'blog' (this will throw an Error in a future version of PHP) in /home/eneg1777/public_html/ebrutalism/api/get_blog.php on line 17
+[07-Mar-2025 13:39:30 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home/eneg1777/public_html/ebrutalism/api/edit_blog.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/eneg1777/public_html/ebrutalism/api/edit_blog.php on line 19
+[07-Mar-2025 13:40:34 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home/eneg1777/public_html/ebrutalism/api/edit_blog.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/eneg1777/public_html/ebrutalism/api/edit_blog.php on line 19
+[07-Mar-2025 13:40:38 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home/eneg1777/public_html/ebrutalism/api/edit_blog.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/eneg1777/public_html/ebrutalism/api/edit_blog.php on line 19
+[07-Mar-2025 13:41:00 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home/eneg1777/public_html/ebrutalism/api/edit_blog.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/eneg1777/public_html/ebrutalism/api/edit_blog.php on line 19
+[07-Mar-2025 13:41:22 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home/eneg1777/public_html/ebrutalism/api/edit_blog.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/eneg1777/public_html/ebrutalism/api/edit_blog.php on line 19
+[07-Mar-2025 13:48:22 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home/eneg1777/public_html/ebrutalism/api/edit_blog.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/eneg1777/public_html/ebrutalism/api/edit_blog.php on line 19
+[07-Mar-2025 13:50:41 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home/eneg1777/public_html/ebrutalism/api/edit_blog.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/eneg1777/public_html/ebrutalism/api/edit_blog.php on line 19
+[07-Mar-2025 13:51:18 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home/eneg1777/public_html/ebrutalism/api/edit_blog.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/eneg1777/public_html/ebrutalism/api/edit_blog.php on line 19
+[07-Mar-2025 13:51:25 Asia/Jakarta] PHP Warning:  Invalid argument supplied for foreach() in /home/eneg1777/public_html/ebrutalism/api/edit_project.php on line 33
+[07-Mar-2025 14:21:16 Asia/Jakarta] PHP Warning:  Invalid argument supplied for foreach() in /home/eneg1777/public_html/ebrutalism/api/edit_project.php on line 33
+[07-Mar-2025 21:43:12 Asia/Jakarta] PHP Warning:  Invalid argument supplied for foreach() in /home/eneg1777/public_html/ebrutalism/api/edit_project.php on line 33
+[07-Mar-2025 21:44:20 Asia/Jakarta] PHP Warning:  Invalid argument supplied for foreach() in /home/eneg1777/public_html/ebrutalism/api/edit_project.php on line 33
+[07-Mar-2025 21:51:48 Asia/Jakarta] PHP Warning:  Invalid argument supplied for foreach() in /home/eneg1777/public_html/ebrutalism/api/edit_project.php on line 33
