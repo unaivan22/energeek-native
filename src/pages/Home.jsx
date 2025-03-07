@@ -12,6 +12,7 @@ import Header from './utils/Header';
 import { ModeToggle } from '@/components/mode-toggle';
 import AnimatedPage from './utils/AnimatedPage';
 import BrutalistFooter from './misc/footers/BrutalistFooter';
+import Blogs from './structure/Blogs';
 
 export default function Home() {
   useEffect(() => {
@@ -49,6 +50,10 @@ export default function Home() {
       
       <div data-aos='fade-up'>
         <Teams />
+      </div>
+
+      <div data-aos='fade-up'>
+        <Blogs />
       </div>
 
       <div data-aos='fade-up'>

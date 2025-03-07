@@ -136,7 +136,7 @@ export default function AddProject() {
                     <Breadcrumb>
                         <BreadcrumbList>
                             <BreadcrumbItem>
-                            <BreadcrumbLink href="/admin">Admin</BreadcrumbLink>
+                            <BreadcrumbLink href="/#/admin">Admin</BreadcrumbLink>
                             </BreadcrumbItem>
                             <BreadcrumbSeparator />
                             <BreadcrumbItem>

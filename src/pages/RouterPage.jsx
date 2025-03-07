@@ -11,6 +11,10 @@ import ProjectDetail from './cpanel/project/ProjectDetail';
 import EditProject from './cpanel/project/EditProject';
 import AllTeams from './AllTeams';
 import AllWorks from './AllWorks';
+import AddBlog from './cpanel/blog/AddBlog';
+import EditBlog from './cpanel/blog/EditBlog';
+import BlogDetail from './cpanel/blog/BlogDetail';
+import AllBlogs from './AllBlogs';
 
 export default function RouterPage() {
   const isAuthenticated = sessionStorage.getItem('adminAuth');
@@ -36,6 +40,16 @@ export default function RouterPage() {
             />
             <Route path="/project/:id" element={<ProjectDetail />} />
 
+            <Route 
+              path="/blog/add" 
+              element={isAuthenticated ? <AddBlog /> : <Navigate to="/login" />} 
+            />
+            <Route 
+              path="/admin/blog/edit/:id" 
+              element={isAuthenticated ? <EditBlog /> : <Navigate to="/login" />} 
+            />
+            <Route path="/blog/:id" element={<BlogDetail />} />
+
 
             <Route path='/team/add' element={<AddTeam/>} />
             {/* <Route path='*' element={<NotFound/>} /> */}
@@ -45,6 +59,8 @@ export default function RouterPage() {
 
             <Route path='/teams' element={<AllTeams/>} />
             <Route path='/works' element={<AllWorks/>} />
+            <Route path='/blogs' element={<AllBlogs/>} />
+
         </Routes>
      </Router>
   )

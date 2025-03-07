@@ -24,7 +24,7 @@ import {
 } from "@/components/ui/card"
 import { Button } from "@/components/ui/button";
 
-export default function EditProject() {
+export default function EditBlog() {
   const { id } = useParams();
   const navigate = useNavigate();
   const [project, setProject] = useState(null);
@@ -167,6 +167,7 @@ export default function EditProject() {
     ['clean']
 ];
   
+  console.log('edit blog page');
 
   return project ? (
     <div>
@@ -197,10 +198,6 @@ export default function EditProject() {
                             <div className='flex gap-12 items-start'>
                                 <div className='flex flex-col gap-4 w-full'>
                                   <Input type="text" value={name} onChange={(e) => setName(e.target.value)} />
-                                    <div className='flex gap-4'>
-                                      <Input type="text" value={client} onChange={(e) => setClient(e.target.value)} />
-                                      <Input type="number" value={year} onChange={(e) => setYear(e.target.value)} />
-                                    </div>
                                     <div className='flex flex-col gap-2 min-h-[280px]'>
                                         <label className="text-gray-600">Deskripsi</label>
                                         <ReactQuill
@@ -221,14 +218,6 @@ export default function EditProject() {
                                           </div>
                                           <Input type="file" multiple accept=".webp" onChange={handleFileChange} />
                                     </div>
-                                </div>
-                                <div className='flex flex-col gap-2 w-[350px]'>
-                                    <div className='flex flex-col gap-1 items-start'>
-                                        <label className="text-gray-600">Thumbnail <br /> <span className='text-xs text-rose-500'>*Must .webp format for size optimize</span></label>
-                                        <Input type="file" accept=".webp" onChange={(e) => setThumbnail(e.target.files[0])} />
-                                        {project.thumbnail && <img src={project.thumbnail} alt="Thumbnail" className="w-full h-[250px] object-cover" />}
-                                    </div>
-                                    {/* {thumbnailFile && <img src={URL.createObjectURL(thumbnailFile)} alt="Preview" className="h-[250px] object-cover w-full mt-2 border-2 border-black" />} */}
                                 </div>
                             </div>
                             <div className="flex justify-end pt-12">

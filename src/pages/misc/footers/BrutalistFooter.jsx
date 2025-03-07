@@ -3,7 +3,7 @@ import { ArrowUpRight, Facebook, Github, Instagram, Linkedin, Twitter } from "lu
 
 export default function BrutalistFooter() {
   return (
-    <footer className="w-full bg-black text-white font-mono border-t-4 border-white py-12">
+    <footer className="w-full bg-[#DC2728] text-white font-mono border-t-4 border-white py-12">
       <div className="container mx-auto lg:px-[10vw] px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {/* Company Info */}
@@ -49,7 +49,7 @@ export default function BrutalistFooter() {
               <input
                 type="email"
                 placeholder="YOUR@EMAIL.COM"
-                className="bg-transparent border border-white px-3 py-2 text-sm w-full sm:w-auto flex-grow placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
+                className="bg-transparent border border-white px-3 py-2 text-sm w-full sm:w-auto flex-grow placeholder:text-white focus:outline-none focus:ring-2 focus:ring-white"
               />
               <button className="bg-white text-black px-4 py-2 text-sm font-bold hover:bg-gray-300 transition-colors">
                 SUBSCRIBE

@@ -60,7 +60,7 @@ export default function ProjectDetail() {
         </div> */}
 
         <div className="container pb-24">
-          <div className="prose max-w-none" dangerouslySetInnerHTML={{ __html: project.description }} />
+          <div className="prose max-w-none quill-detailnya" dangerouslySetInnerHTML={{ __html: project.description }} />
         </div>
         </AnimatedPage>
     </div>

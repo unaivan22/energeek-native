@@ -249,6 +249,100 @@
     background-image: radial-gradient(circle at center center, #393939, #393939), repeating-radial-gradient(circle at center center, #393939, #393939, 10px, transparent 20px, transparent 10px);
     background-blend-mode: multiply;
   }
+
+  blockquote {
+    background: #f9f9f9;
+    border-left: 10px solid #ccc;
+    margin: 1.5em 10px;
+    padding: 1em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+  }
+  blockquote:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+  }
+  blockquote p {
+    display: inline;
+  }
+  blockquote span {
+    background: #f9f9f9;
+  }
+  
+  .quill-detailnya p a{
+    text-decoration: underline;
+    color: blue;
+  }
+  
+  .map-detail p a{
+    text-decoration: underline;
+    color: blue;
+  }
+  
+  .quill-detailnya h1{
+    font-size: 1.5em;
+    font-weight: 800;
+    margin: 0 0 .5rem 0;
+  }
+  
+  .quill-detailnya h2{
+    font-size: 1em;
+    font-weight: 800;
+    margin: 0 0 .5rem 0;
+  }
+  
+  .quill-detailnya p{
+    font-size: .875rem !important;
+  }
+  
+  .quill-detailnya ol{
+    padding: revert !important;
+  }
+  
+  .quill-detailnya ol li{
+    list-style: auto;
+    list-style-position: outside;
+    padding: revert !important;
+    font-size: .875rem !important;
+  }
+  
+  .quill-detailnya ul{
+    padding: revert !important;
+    margin: 6px 0;
+  }
+  
+  .quill-detailnya ul li{
+    list-style: disc;
+    list-style-position: outside;
+    font-size: .875rem !important;
+  }
+  
+  .quill-detailnya .ql-align-center{
+    text-align: center !important;
+  }
+  
+  .quill-detailnya .ql-align-right{
+    text-align: right !important;
+  }
+  
+  .quill-detailnya .ql-size-small{
+    font-size: .7rem !important;
+    font-weight: 300;
+  }
+  
+  .quill-detailnya .ql-size-large{
+    font-size: 2rem !important;
+    font-weight: 700;
+  }
+  
+  .quill-detailnya .ql-size-huge{
+    font-size: 3rem !important;
+    font-weight: bold;
+  }
+  
 }
 
 /*

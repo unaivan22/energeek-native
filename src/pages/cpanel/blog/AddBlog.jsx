@@ -25,12 +25,11 @@ import {
     CardTitle,
   } from "@/components/ui/card"
 
-export default function AddTeam() {
+export default function AddBlog() {
     const [form, setForm] = useState({
         name: "",
-        role: "",
-        email: "",
-        photo: "",
+        description: "",
+        thumbnail: "",
     });
 
     const [file, setFile] = useState(null);
@@ -62,44 +61,57 @@ export default function AddTeam() {
         e.preventDefault();
     
         try {
-            let photoUrl = "";
+            let thumbnailUrl = "";
             if (file) {
                 const formData = new FormData();
                 formData.append("file", file);
-                const uploadRes = await axios.post("/api/uploadteam.php", formData, {
+                const uploadRes = await axios.post("/api/uploadblog.php", formData, {
                     headers: { "Content-Type": "multipart/form-data" },
                 });
-                photoUrl = uploadRes.data.url;
+                thumbnailUrl = uploadRes.data.url;
             }
     
-            const payload = { ...form, photo: photoUrl };
+            const payload = { ...form, thumbnail: thumbnailUrl };
     
             console.log("Payload yang dikirim:", payload); // 🔍 Debugging di frontend
     
-            const res = await axios.post("/api/teams.php", payload);
+            const res = await axios.post("/api/blogs.php", payload);
     
             console.log("Server response:", res.data); // 🔍 Debugging response dari backend
     
             if (res.data.success) {
-                alert("Team berhasil ditambahkan!");
+                alert("Blog berhasil ditambahkan!");
                 navigate('/admin');
             } else {
-                alert("Gagal menambahkan teams: " + res.data.error);
+                alert("Gagal menambahkan blog: " + res.data.error);
             }
         } catch (error) {
             console.error("Error:", error);
             console.log(error.response?.data); // 🔍 Debugging error dari server
-            alert("Gagal menambahkan team.");
+            alert("Gagal menambahkan blog.");
         }
     };
     
+    const handleQuillChange = (content) => {
+        setForm((prevForm) => ({ ...prevForm, description: content }));
+    };
+
+    const fullToolbarOptions = [
+        [{ 'header': '1'}, { 'header': '2'}],
+        [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+        [{ 'size': ['small', false, 'large', 'huge'] }],
+        [{ 'color': [] }, { 'background': [] }],
+        [{ 'align': [] }],
+        ['bold', 'italic', 'underline', 'strike', 'blockquote'],
+        ['clean']
+    ];
 
     return (
         <div>
             {isMobile ? <Forbidden /> : 
-            <div className='container max-w-3xl mx-auto py-12'>
+            <div className='container w-full mx-auto py-12'>
                 <div className='flex flex-col gap-2 mb-8'>
-                    <h1 className='text-2xl font-bold'>New Team</h1>
+                    <h1 className='text-2xl font-bold'>New Blog</h1>
                     <Breadcrumb>
                         <BreadcrumbList>
                             <BreadcrumbItem>
@@ -107,29 +119,36 @@ export default function AddTeam() {
                             </BreadcrumbItem>
                             <BreadcrumbSeparator />
                             <BreadcrumbItem>
-                            <BreadcrumbPage>Add New Team</BreadcrumbPage>
+                            <BreadcrumbPage>Add New Blog</BreadcrumbPage>
                             </BreadcrumbItem>
                         </BreadcrumbList>
                     </Breadcrumb>
                 </div>
                 <Card className="w-full">
                     <CardHeader>
-                        <CardTitle>Create Team</CardTitle>
+                        <CardTitle>Create Blog</CardTitle>
                         <CardDescription>Fill in the forms below..</CardDescription>
                     </CardHeader>
                     <CardContent>
-                        <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
-                            <Input type="text" name="name" placeholder="Name" value={form.name} onChange={handleInputChange} required />
-                            <Input type="text" name="role" placeholder="Role" value={form.role} onChange={handleInputChange} required />
-                            <Input type="email" name="email" placeholder="Email" value={form.email} onChange={handleInputChange} required />
-                            
-                            <div className='flex flex-col gap-3'>
-                                <label className="text-gray-600">Photo</label>
+                        <form onSubmit={handleSubmit} className='flex gap-4 min-h-[460px] relative'>
+                            <div className='flex flex-col gap-8 w-full'>
+                                <Input type="text" name="name" placeholder="Judul" value={form.name} onChange={handleInputChange} required />
+                                <ReactQuill
+                                    theme="snow"
+                                    bounds=".quill-editor"
+                                    modules={{ toolbar: fullToolbarOptions }}
+                                    value={form.description}
+                                    onChange={handleQuillChange}
+                                    className="w-full h-[300px] mb-12 rounded"
+                                />
+                            </div>
+                            <div className='flex flex-col gap-3 max-w-[300px]'>
+                                <label className="text-gray-600">Thumbnail <br /> <span className='text-xs text-rose-500'>*Must .webp format for size optimize</span></label>
                                 <Input type="file" accept=".webp" onChange={handleFileChange} className="border rounded p-2" />
                                 {file && <img src={URL.createObjectURL(file)} alt="Preview" className="w-24 aspect-square object-cover border-2 border-black" />}
                             </div>
 
-                            <div className='py-2 flex justify-end pt-12'>
+                            <div className='py-2 flex justify-end pt-12 absolute bottom-6 right-6'>
                                 <Button type="submit">Simpan</Button>
                             </div>
                         </form>
