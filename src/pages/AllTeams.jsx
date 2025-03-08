@@ -9,6 +9,16 @@ import { ModeToggle } from '@/components/mode-toggle';
 import AnimatedPage from './utils/AnimatedPage';
 import ScrollToTop from './utils/ScrollToTop';
 import Footer from './utils/Footer';
+import {
+    Drawer,
+    DrawerClose,
+    DrawerContent,
+    DrawerDescription,
+    DrawerFooter,
+    DrawerHeader,
+    DrawerTitle,
+    DrawerTrigger,
+  } from "@/components/ui/drawer"
 
 export default function AllTeams() {
     const [teams, setTeams] = useState([]);
@@ -70,12 +80,26 @@ export default function AllTeams() {
             </div>
             <div className='grid lg:grid-cols-3 grid-cols-1 py-24 pb-12 gap-6'>
             {teams.map((team) => (
-                <div key={team.id} className='border border-black dark:border-white flex flex-col items-center rounded-xl p-6 gap-2 hover:shadow-[10px_10px_0px_rgba(0,0,0,1)] cursor-pointer'>
-                {team.photo && <img src={team.photo} alt="Team" className='rounded-full object-cover h-[280px] w-auto' />}
-                <h1 className='text-xl font-semibold line-clamp-2'>{team.name}</h1>
-                <p className='italic text-sm opacity-70 font-light text-center'>{team.role}</p>
-                <p className='italic text-sm opacity-70 font-light text-center'> {team.email}</p>
-                </div>
+                <Drawer key={team.id}>
+                    <DrawerTrigger asChild>
+                        <div className='border border-black dark:border-white flex flex-col items-center rounded-xl p-6 gap-2 hover:shadow-[10px_10px_0px_rgba(0,0,0,1)] cursor-pointer'>
+                        {team.photo && <img src={team.photo} alt="Team" className='rounded-full object-cover h-[280px] w-auto' />}
+                        <h1 className='text-xl font-semibold line-clamp-2'>{team.name}</h1>
+                        <p className='italic text-sm opacity-70 font-light'>{team.role}</p>
+                        <p className='italic text-sm opacity-70 font-light'> {team.email}</p>
+                        </div>
+                    </DrawerTrigger>
+                    <DrawerContent>
+                        <div className="mx-auto w-full max-w-sm pb-12 flex flex-col">
+                        {team.photo && <img src={team.photo} alt="Team" className='object-cover h-[360px] aspect-square w-auto mb-6 border-2 border-black' />}
+                        <h1 className='text-2xl font-bold line-clamp-2'>{team.name}</h1>
+                        <p className='italic text-lg opacity-70 font-semibold'>{team.role}</p>
+                        <a className='italic text-lg opacity-70 font-semibold underline' href={`mailto:${team.email}`}>
+                            {team.email}
+                        </a>
+                        </div>
+                    </DrawerContent>
+                    </Drawer>
             ))}
             </div>
             </div>
